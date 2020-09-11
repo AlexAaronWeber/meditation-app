@@ -9,4 +9,6 @@ export class MusSearchComponent implements OnInit {
   constructor(private service: MusicService) {}
 
   ngOnInit(): void {}
+
+  getMeditations = () => {};
 }
