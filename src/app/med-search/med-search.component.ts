@@ -8,5 +8,16 @@ import { MeditationService } from '../meditation.service';
 export class MedSearchComponent implements OnInit {
   constructor(private service: MeditationService) {}
 
-  ngOnInit(): void {}
+  meditationsVideos: any;
+
+  ngOnInit(): void {
+    this.getVideos();
+  }
+
+  getVideos = () => {
+    this.service.getData().subscribe((response) => {
+      console.log(response);
+      this.meditationsVideos = response;
+    });
+  };
 }

@@ -11,12 +11,15 @@ export class MeditationService {
 
   constructor(private http: HttpClient) {}
 
-  getData = (keyword: string): any => {
+  getData = (): any => {
     return this.http.get(this.baseUrlMeditations, {
       params: {
-        api_key: this.key,
-        title: keyword,
+        key: this.key,
+        q: 'meditation',
+        part: 'snippet',
       },
     });
   };
 }
+
+//https://www.youtube.com/watch?v=

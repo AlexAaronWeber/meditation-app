@@ -1,0 +1,9 @@
+div {
+  margin: 0;
+  padding: 0;
+}
+
+.activity {
+  border: 1px solid black;
+  width: 30%;
+}
