@@ -1,7 +1,7 @@
 <app-header></app-header>
 <p>book-search works!</p>
-<div>
-  <p *ngFor="let book of meditationBooks">
-    {{ book.items }}
+<div *ngFor="let book of meditationBooks; index as i">
+  <p>
+    {{ book.items[i].volumeInfo.imageLinks.thumbnail }}
   </p>
 </div>
