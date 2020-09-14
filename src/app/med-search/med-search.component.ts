@@ -6,18 +6,24 @@ import { MeditationService } from '../meditation.service';
   styleUrls: ['./med-search.component.css'],
 })
 export class MedSearchComponent implements OnInit {
+  meditationsVideos: any;
+  meditations: any;
   constructor(private service: MeditationService) {}
 
-  meditationsVideos: any;
-
   ngOnInit(): void {
-    this.getVideos();
+    //this.getVideos();
+    this.getPlaceHolderVids();
   }
 
-  getVideos = () => {
-    this.service.getData().subscribe((response) => {
-      console.log(response);
-      this.meditationsVideos = response;
-    });
+  // getVideos = () => {
+  //   this.service.getData().subscribe((response) => {
+  //     console.log(response);
+  //     this.meditationsVideos = response.items;
+  //   });
+  // };
+
+  getPlaceHolderVids = () => {
+    this.meditationsVideos = this.service.getPlaceHolderVids().items;
+    console.log(this.meditationsVideos);
   };
 }
