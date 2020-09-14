@@ -1,7 +1,20 @@
 <app-header></app-header>
-<p>book-search works!</p>
+
+<form #bookForm="ngForm" (ngSubmit)="searchBooks(bookForm)">
+  <label for="books">Book Search</label>
+  <select id="books" name="books" ngModel>
+    <option value="stress">Stress</option>
+    <option value="anxiety">Anxiety</option>
+    <option value="depression">Depression</option>
+    <option value="fear">Fear</option>
+  </select>
+
+  <button>Submit</button>
+</form>
+
 <div *ngFor="let book of meditationBooks; index as i">
-  <p>
-    {{ book.items[i].volumeInfo.imageLinks.thumbnail }}
-  </p>
+  <p>{{ meditationBooks[i].volumeInfo.title }}</p>
+  <p>{{ meditationBooks[i].volumeInfo.authors }}</p>
+  <img src="{{ meditationBooks[i].volumeInfo.imageLinks.thumbnail }}" alt="" />
+  <p>{{ meditationBooks[i].volumeInfo.description }}</p>
 </div>

@@ -1,20 +1,22 @@
 <app-header></app-header>
-<form>
+<form #meditationForm="ngForm">
   <label for="meditation">Meditation Search</label>
-  <select id="meditation" name="meditation">
+  <select id="meditation" name="meditation" ngModel>
     <option value="Stress">Stress</option>
     <option value="Anxiety">Anxiety</option>
     <option value="Depression">Depression</option>
-    <option value="Chill">Chill</option>
+    <option value="fear">Fear</option>
   </select>
 
   <label for="duration">Length</label>
-  <select id="duration" name="duration">
+  <select id="duration" name="duration" ngModel>
     <option value="fiveMinutes">5 minutes</option>
     <option value="tenMinutes">10 minutes</option>
     <option value="fifteenMinutes">15 minutes</option>
     <option value="twentyMinutes">20 minutes</option>
   </select>
+
+  <button>Submit</button>
 </form>
 
 <div *ngFor="let meditation of meditationsVideos">
