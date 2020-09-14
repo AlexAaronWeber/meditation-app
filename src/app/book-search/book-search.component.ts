@@ -18,7 +18,7 @@ export class BookSearchComponent implements OnInit {
   }
 
   getBooks = () => {
-    this.service.getData().subscribe((response) => {
+    this.service.getData('depression').subscribe((response) => {
       this.meditationBooks = response.items;
       console.log(response.items);
     });
@@ -28,7 +28,7 @@ export class BookSearchComponent implements OnInit {
     console.log(form.value.books);
     this.router.navigate(['book'], {
       queryParams: {
-        subject: form.value,
+        q: form.value.books,
       },
     });
   };

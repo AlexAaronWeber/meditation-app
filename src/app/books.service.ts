@@ -11,11 +11,11 @@ export class BooksService {
 
   constructor(private http: HttpClient) {}
 
-  getData = (): any => {
+  getData = (subject: string): any => {
     return this.http.get(this.baseUrlBook, {
       params: {
         key: this.key,
-        q: 'meditation',
+        q: subject,
       },
     });
   };
