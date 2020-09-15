@@ -9,6 +9,7 @@ import { FavoritesService } from '../favorites.service';
 })
 export class MusSearchComponent implements OnInit {
   @Input() musicRef: any;
+  @Output() showInfo = new EventEmitter<any>();
   musicVideos: any;
   music: any;
   favorites: any = [];

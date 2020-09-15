@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { FavoritesService } from '../favorites.service';
 import { MusicService } from '../music.service';
 
@@ -10,7 +10,14 @@ import { MusicService } from '../music.service';
 export class FavMusComponent implements OnInit {
   @Input() musicRef: any;
 
+  musicFavs: any[] = [];
+
   constructor(private service: FavoritesService) {}
 
   ngOnInit(): void {}
+
+  // getMusicFavorites = () => {
+  //   this.musicFavs = this.service.getFavorites();
+  //   console.log('this is the favs', this.musicFavs);
+  // };
 }
