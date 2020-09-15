@@ -11,9 +11,8 @@ export class FavoritesService {
   constructor() {}
 
   addToFavorites = (music: any) => {
-    this.favoriteMusic.push((favorite) => {
-      return favorite === music;
-    });
+    this.favoriteMusic.push(music);
+    console.log(this.favoriteMusic);
   };
 
   getFavorites = () => {
