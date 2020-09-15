@@ -1,11 +1,11 @@
 <app-header></app-header>
-<form #meditationForm="ngForm">
+<form #meditationForm="ngForm" (ngSubmit)="getVideos(meditationForm)">
   <label for="meditation">Meditation Search</label>
   <select id="meditation" name="meditation" ngModel>
-    <option value="Stress">Stress</option>
-    <option value="Anxiety">Anxiety</option>
-    <option value="Depression">Depression</option>
-    <option value="fear">Fear</option>
+    <option value="guided stress meditation">Stress</option>
+    <option value="guided anxiety meditation">Anxiety</option>
+    <option value="guided depression meditation">Depression</option>
+    <option value="guided fear meditation">Fear</option>
   </select>
 
   <label for="duration">Length</label>
@@ -20,6 +20,7 @@
 </form>
 
 <div *ngFor="let meditation of meditationsVideos">
+  <p>{{ meditation.snippet.title }}</p>
   <youtube-player
     videoId="{{ meditation.id.videoId }}"
     suggestedQuality="highres"

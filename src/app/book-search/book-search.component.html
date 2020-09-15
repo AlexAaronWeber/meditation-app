@@ -1,6 +1,6 @@
 <app-header></app-header>
 
-<form #bookForm="ngForm" (ngSubmit)="searchBooks(bookForm)">
+<form #bookForm="ngForm" (ngSubmit)="getBooks(bookForm)">
   <label for="books">Book Search</label>
   <select id="books" name="books" ngModel>
     <option value="stress">Stress</option>

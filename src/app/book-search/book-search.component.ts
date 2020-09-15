@@ -13,12 +13,10 @@ export class BookSearchComponent implements OnInit {
 
   constructor(private service: BooksService, private router: Router) {}
 
-  ngOnInit(): void {
-    this.getBooks();
-  }
+  ngOnInit(): void {}
 
-  getBooks = () => {
-    this.service.getData('depression').subscribe((response) => {
+  getBooks = (form: NgForm): any => {
+    this.service.getData(form.value.books).subscribe((response) => {
       this.meditationBooks = response.items;
       console.log(response.items);
     });

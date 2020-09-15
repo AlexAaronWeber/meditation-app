@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MeditationService } from '../meditation.service';
 import { DomSanitizer } from '@angular/platform-browser';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-med-search',
@@ -16,16 +17,15 @@ export class MedSearchComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    //this.getVideos();
-    this.getPlaceHolderVids();
+    //this.getPlaceHolderVids();
   }
 
-  // getVideos = () => {
-  //   this.service.getData().subscribe((response) => {
-  //     console.log(response);
-  //     this.meditationsVideos = response.items;
-  //   });
-  // };
+  getVideos = (form: NgForm): any => {
+    this.service.getMeditations(form.value.meditation).subscribe((response) => {
+      this.meditationsVideos = response.items;
+      console.log(response);
+    });
+  };
 
   sanitize = () => {
     this.meditationsVideos.forEach((item) => {
