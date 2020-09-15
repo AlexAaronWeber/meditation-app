@@ -9,7 +9,6 @@ import { FavoritesService } from '../favorites.service';
 })
 export class MusSearchComponent implements OnInit {
   @Input() musicRef: any;
-  @Output() showInfo = new EventEmitter<any>();
   musicVideos: any;
   music: any;
   favorites: any = [];
@@ -26,16 +25,11 @@ export class MusSearchComponent implements OnInit {
   getMusicVideos = (form: NgForm): any => {
     this.service.getMusic(form.value.music).subscribe((response) => {
       this.musicVideos = response.items;
-      console.log(response);
+      // console.log(response);
     });
   };
 
   addToFavorites = (music) => {
-    this.musicService.addToFavorites(music);
-  };
-
-  getPlaceHolderMusic = () => {
-    this.musicVideos = this.service.getPlaceHolderMusic().items;
-    console.log(this.musicVideos);
+    this.musicService.addToMusicFavorites(music);
   };
 }

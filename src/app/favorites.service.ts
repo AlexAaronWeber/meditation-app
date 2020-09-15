@@ -4,18 +4,18 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class FavoritesService {
-  favoriteMusic: any = [];
+  favoriteMusic: any[] = [];
   favoriteMeditation: any = [];
   favoriteBooks: any = [];
 
   constructor() {}
 
-  addToFavorites = (music: any) => {
+  addToMusicFavorites = (music: any) => {
     this.favoriteMusic.push(music);
     console.log(this.favoriteMusic);
   };
 
-  getFavorites = () => {
+  getFavorites = (): any => {
     return this.favoriteMusic;
   };
 

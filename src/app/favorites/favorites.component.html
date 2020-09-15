@@ -10,7 +10,6 @@
     <app-fav-mus
       *ngFor="let favorite of favorites; index as i"
       [musicRef]="favorite"
-      (showInfo)="showDetails(i)"
     >
     </app-fav-mus>
   </div>

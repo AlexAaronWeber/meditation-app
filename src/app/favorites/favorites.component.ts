@@ -8,13 +8,16 @@ import { FavoritesService } from '../favorites.service';
 })
 export class FavoritesComponent implements OnInit {
   showIndex: number;
-  favorites: any[];
+  favorites: any[] = [];
+  musicFavs: any[] = [];
   constructor(private service: FavoritesService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getMusicFavorites();
+  }
 
-  showDetails = (index: number) => {
-    this.showIndex = index;
-    console.log(this.showIndex);
+  getMusicFavorites = () => {
+    this.musicFavs = this.service.getFavorites();
+    console.log('this is the favs', this.musicFavs);
   };
 }

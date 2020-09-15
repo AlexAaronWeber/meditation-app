@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FavoritesService } from '../favorites.service';
 
 @Component({
   selector: 'app-fav-med',
   templateUrl: './fav-med.component.html',
-  styleUrls: ['./fav-med.component.css']
+  styleUrls: ['./fav-med.component.css'],
 })
 export class FavMedComponent implements OnInit {
+  @Input() meditationRef: any;
 
-  constructor() { }
+  constructor(private service: FavoritesService) {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }
