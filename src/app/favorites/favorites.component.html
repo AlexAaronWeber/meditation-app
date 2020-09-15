@@ -8,7 +8,7 @@
   <div class="main-cards">
     <p>Listen to your favorite soothing music!</p>
     <app-fav-mus
-      *ngFor="let favorite of favorites; index as i"
+      *ngFor="let favorite of musicFavs; index as i"
       [musicRef]="favorite"
     >
     </app-fav-mus>
