@@ -1,2 +1,22 @@
 <app-header></app-header>
-<p>mus-search works!</p>
+<p>Listen to soothing music!</p>
+<form #musicForm="ngForm">
+  <label for="music">music Search</label>
+  <select id="music" name="music" ngModel>
+    <option value="acoustic newage music">Stress</option>
+    <option value="anxiety reduction instrumental">Anxiety</option>
+    <option value="uplifting newage music">Depression</option>
+    <option value="relaxing newage music">Fear</option>
+  </select>
+  <div *ngFor="let music of musicVideos">
+    <youtube-player
+      videoId="{{ music.id.videoId }}"
+      suggestedQuality="highres"
+      [height]="250"
+      [width]="500"
+      [startSeconds]="'0'"
+      [endSeconds]=""
+    >
+    </youtube-player>
+  </div>
+</form>

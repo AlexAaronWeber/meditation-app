@@ -6,9 +6,16 @@ import { MusicService } from '../music.service';
   styleUrls: ['./mus-search.component.css'],
 })
 export class MusSearchComponent implements OnInit {
+  musicVideos: any;
+  music: any;
   constructor(private service: MusicService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.getPlaceHolderMusic();
+  }
 
-  getMeditations = () => {};
+  getPlaceHolderMusic = () => {
+    this.musicVideos = this.service.getPlaceHolderMusic().items;
+    console.log(this.musicVideos);
+  };
 }

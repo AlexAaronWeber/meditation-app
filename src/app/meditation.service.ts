@@ -9,7 +9,7 @@ export class MeditationService {
   baseUrlMeditations: string = 'https://www.googleapis.com/youtube/v3/search';
   brandonKey: string = 'AIzaSyBAU64ophkz8C4KY1z15G-YjFav_DqnRp8';
   troyKey: string = 'AIzaSyCariktb8hHfDYmmGcFoBsGec3mx9YsThM';
-
+  keyword: string;
   placeholder: any = {
     kind: 'youtube#searchListResponse',
     etag: 'v8qjrVbBBPyXH8U5ey0eR9zUjzY',
@@ -552,16 +552,16 @@ export class MeditationService {
   };
   constructor(private http: HttpClient) {}
 
-  // getData = (): any => {
-  //   return this.http.get(this.baseUrlMeditations, {
-  //     params: {
-  //       key: this.troyKey,
-  //       q: 'meditation',
-  //       part: 'snippet',
-  //       maxResults: '5',
-  //     },
-  //   });
-  // };
+  getMeditations = (keyword): any => {
+    return this.http.get(this.baseUrlMeditations, {
+      params: {
+        key: this.troyKey,
+        q: keyword,
+        part: 'snippet',
+        maxResults: '5',
+      },
+    });
+  };
 
   getPlaceHolderVids = () => {
     return this.placeholder;
