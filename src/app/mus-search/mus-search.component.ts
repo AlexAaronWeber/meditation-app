@@ -16,7 +16,7 @@ export class MusSearchComponent implements OnInit {
 
   constructor(
     private service: MusicService,
-    private musicService: FavoritesService
+    private favsService: FavoritesService
   ) {}
 
   ngOnInit(): void {
@@ -31,6 +31,6 @@ export class MusSearchComponent implements OnInit {
   };
 
   addToFavorites = (music) => {
-    this.musicService.addToMusicFavorites(music);
+    this.favsService.addToMusicFavorites(music);
   };
 }

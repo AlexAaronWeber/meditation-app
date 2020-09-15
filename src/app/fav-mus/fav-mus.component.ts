@@ -14,7 +14,9 @@ export class FavMusComponent implements OnInit {
 
   constructor(private service: FavoritesService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    //this.getMusicFavorites();
+  }
 
   // getMusicFavorites = () => {
   //   this.musicFavs = this.service.getFavorites();
