@@ -6,7 +6,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MusicService {
   baseUrlMusic: string = 'https://www.googleapis.com/youtube/v3/search';
-  key: string = 'AIzaSyBAU64ophkz8C4KY1z15G-YjFav_DqnRp8';
+  brandonKey: string = 'AIzaSyBAU64ophkz8C4KY1z15G-YjFav_DqnRp8';
+  troyKey: string = 'AIzaSyCariktb8hHfDYmmGcFoBsGec3mx9YsThM';
   placeholderMusic: any = {
     kind: 'youtube#searchListResponse',
     etag: 'gW-ETCORh5amzzHNYRpzCswJg4g',
@@ -560,6 +561,17 @@ export class MusicService {
     ],
   };
   constructor(private http: HttpClient) {}
+
+  getMusic = (subject: string): any => {
+    return this.http.get(this.baseUrlMusic, {
+      params: {
+        key: this.troyKey,
+        q: subject,
+        part: 'snippet',
+        maxResults: '15',
+      },
+    });
+  };
 
   getPlaceHolderMusic = () => {
     return this.placeholderMusic;

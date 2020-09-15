@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MusicService } from '../music.service';
+import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-mus-search',
   templateUrl: './mus-search.component.html',
@@ -11,8 +12,15 @@ export class MusSearchComponent implements OnInit {
   constructor(private service: MusicService) {}
 
   ngOnInit(): void {
-    this.getPlaceHolderMusic();
+    //this.getPlaceHolderMusic();
   }
+
+  getMusicVideos = (form: NgForm): any => {
+    this.service.getMusic(form.value.music).subscribe((response) => {
+      this.musicVideos = response.items;
+      console.log(response);
+    });
+  };
 
   getPlaceHolderMusic = () => {
     this.musicVideos = this.service.getPlaceHolderMusic().items;

@@ -7,6 +7,7 @@ import { stringify } from '@angular/compiler/src/util';
 })
 export class MeditationService {
   baseUrlMeditations: string = 'https://www.googleapis.com/youtube/v3/search';
+  videoBaseUrl: string = 'https://www.googleapis.com/youtube/v3/videos/list';
   brandonKey: string = 'AIzaSyBAU64ophkz8C4KY1z15G-YjFav_DqnRp8';
   troyKey: string = 'AIzaSyCariktb8hHfDYmmGcFoBsGec3mx9YsThM';
   keyword: string;
@@ -552,13 +553,13 @@ export class MeditationService {
   };
   constructor(private http: HttpClient) {}
 
-  getMeditations = (keyword): any => {
+  getMeditations = (subject: string): any => {
     return this.http.get(this.baseUrlMeditations, {
       params: {
         key: this.troyKey,
-        q: keyword,
+        q: subject,
         part: 'snippet',
-        maxResults: '5',
+        maxResults: '15',
       },
     });
   };
