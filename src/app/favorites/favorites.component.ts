@@ -40,4 +40,15 @@ export class FavoritesComponent implements OnInit {
   // deleteMusicFavorite = (fav: any) => {
   //   this.musicFavs.deleteFavorite(fav);
   // };
+  deleteBookFavorite = (index: number) => {
+    this.bookFavs.splice(index, 1);
+  };
+
+  deleteMeditationFavorite = (index: number) => {
+    this.meditationFavs.splice(index, 1);
+  };
+
+  deleteMusicFavorite = (index: number) => {
+    this.musicFavs.splice(index, 1);
+  };
 }

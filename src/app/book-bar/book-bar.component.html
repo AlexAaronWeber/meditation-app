@@ -1,1 +1,12 @@
-<p>book-bar works!</p>
+<div class="scroll-box">
+  <h5 class="selected">Selected Books on Meditation!</h5>
+  <div *ngFor="let book of meditationBooks; index as i">
+    <p>{{ meditationBooks[i].volumeInfo.title }}</p>
+    <p>{{ meditationBooks[i].volumeInfo.authors }}</p>
+    <img
+      src="{{ meditationBooks[i].volumeInfo.imageLinks.thumbnail }}"
+      alt=""
+    />
+    <button (click)="addToFavorites(book)">Add to Favorites</button>
+  </div>
+</div>

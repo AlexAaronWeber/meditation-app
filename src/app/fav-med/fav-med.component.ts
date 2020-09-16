@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { FavoritesService } from '../favorites.service';
 
 @Component({
@@ -8,14 +8,20 @@ import { FavoritesService } from '../favorites.service';
 })
 export class FavMedComponent implements OnInit {
   @Input() meditationsRef: any;
-
-  meditationsFavs: any[] = [];
+  @Output() deleted = new EventEmitter<void>();
 
   constructor(private service: FavoritesService) {}
 
   ngOnInit(): void {}
 
-  deleteMeditationFavorite = (fav: any) => {
-    this.service.deleteMedFavorite(fav);
-  };
+  deleteMeditation() {
+    this.deleted.emit();
+  }
+
+  // deleteMeditationFavorite = (fav: any) => {
+  //   this.service.deleteMedFavorite(fav);
+  // };
+  // deleteMeditationFavorite = (index: number) => {
+  //   this.meditationsFavs.splice(index, 1);
+  // };
 }

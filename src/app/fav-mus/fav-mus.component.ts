@@ -9,6 +9,7 @@ import { MusicService } from '../music.service';
 })
 export class FavMusComponent implements OnInit {
   @Input() musicRef: any;
+  @Output() deleted = new EventEmitter<void>();
 
   musicFavs: any[] = [];
 
@@ -18,12 +19,15 @@ export class FavMusComponent implements OnInit {
     //this.getMusicFavorites();
   }
 
+  deleteMusic() {
+    this.deleted.emit();
+  }
   // getMusicFavorites = () => {
   //   this.musicFavs = this.service.getFavorites();
   //   console.log('this is the favs', this.musicFavs);
   // };
 
-  deleteMusicFavorite = (fav: any) => {
-    this.service.deleteFavorite(fav);
-  };
+  // deleteMusicFavorite = (fav: any) => {
+  //   this.service.deleteFavorite(fav);
+  // };
 }
