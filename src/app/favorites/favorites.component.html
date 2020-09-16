@@ -6,6 +6,7 @@
     <app-fav-med
       *ngFor="let favorite of meditationFavs; index as i"
       [meditationsRef]="favorite"
+      (deleted)="deleteMeditationFavorite(i)"
     >
     </app-fav-med>
     <h2 *ngIf="meditationFavs.length === 0" routerLink="/meditations">
@@ -19,6 +20,7 @@
     <app-fav-mus
       *ngFor="let favorite of musicFavs; index as i"
       [musicRef]="favorite"
+      (deleted)="deleteMusicFavorite(i)"
     >
     </app-fav-mus>
     <h2 *ngIf="musicFavs.length === 0" routerLink="/music">
@@ -32,6 +34,7 @@
     <app-fav-book
       *ngFor="let favorite of bookFavs; index as i"
       [bookRef]="favorite"
+      (deleted)="deleteBookFavorite(i)"
     >
     </app-fav-book>
     <h2 *ngIf="bookFavs.length === 0" routerLink="/book">

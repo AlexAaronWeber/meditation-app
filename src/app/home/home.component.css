@@ -8,3 +8,8 @@ main {
   margin: 5px;
   width: 60%;
 }
+
+.scroll-box {
+  height: 100px;
+  overflow: scroll;
+}
