@@ -558,7 +558,7 @@ export class MeditationService {
   getMeditations = (subject: string): any => {
     return this.http.get(this.baseUrlMeditations, {
       params: {
-        key: this.troyKey,
+        key: this.brandonKey,
         q: subject,
         part: 'snippet',
         maxResults: '15',
