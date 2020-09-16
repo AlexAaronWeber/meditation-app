@@ -12,9 +12,11 @@ export class ModComponent implements OnInit {
   constructor(private service: MeditationService) {}
 
   ngOnInit(): void {
-    this.getMeditationForToday(),
-      this.randomMod(this.modVideo),
+    this.getMeditationForToday();
+    setTimeout(() => {
+      this.randomMod(this.modVideo);
       console.log(this.randomAssVideo);
+    }, 1000);
   }
 
   getMeditationForToday = () => {
