@@ -1,27 +1,41 @@
 <app-header></app-header>
 <main class="card-container">
+  <!-- meditations -->
   <div class="main-cards">
-    <p>Your Favorites meditation techniques!</p>
+    <h1>Your Favorites meditation techniques!</h1>
     <app-fav-med
       *ngFor="let favorite of meditationFavs; index as i"
       [meditationsRef]="favorite"
-    ></app-fav-med>
+    >
+    </app-fav-med>
+    <h2 *ngIf="meditationFavs.length === 0" routerLink="/meditations">
+      Click Here to Add Meditations to your Favorites!
+    </h2>
   </div>
 
+  <!-- music -->
   <div class="main-cards">
-    <p>Listen to your favorite soothing music!</p>
+    <h1>Listen to your favorite soothing music!</h1>
     <app-fav-mus
       *ngFor="let favorite of musicFavs; index as i"
       [musicRef]="favorite"
     >
     </app-fav-mus>
+    <h2 *ngIf="musicFavs.length === 0" routerLink="/music">
+      Click Here to Add Music to your Favorites!
+    </h2>
   </div>
 
+  <!-- books -->
   <div class="main-cards">
-    <p>Check out your favorite books on mental health!</p>
+    <h1>Check out your favorite books on mental health!</h1>
     <app-fav-book
       *ngFor="let favorite of bookFavs; index as i"
       [bookRef]="favorite"
-    ></app-fav-book>
+    >
+    </app-fav-book>
+    <h2 *ngIf="bookFavs.length === 0" routerLink="/book">
+      Click Here to Add Books to your Favorites!
+    </h2>
   </div>
 </main>
