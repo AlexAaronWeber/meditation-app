@@ -2,7 +2,10 @@
 <main class="card-container">
   <div class="main-cards">
     <p>Your Favorites meditation techniques!</p>
-    <app-fav-med></app-fav-med>
+    <app-fav-med
+      *ngFor="let favorite of meditationFavs; index as i"
+      [meditationsRef]="favorite"
+    ></app-fav-med>
   </div>
 
   <div class="main-cards">
@@ -16,6 +19,9 @@
 
   <div class="main-cards">
     <p>Check out your favorite books on mental health!</p>
-    <app-fav-book></app-fav-book>
+    <app-fav-book
+      *ngFor="let favorite of bookFavs; index as i"
+      [bookRef]="favorite"
+    ></app-fav-book>
   </div>
 </main>

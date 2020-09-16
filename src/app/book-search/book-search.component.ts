@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { BooksService } from '../books.service';
 import { Router } from '@angular/router';
+import { FavoritesService } from '../favorites.service';
 
 @Component({
   selector: 'app-book-search',
@@ -9,9 +10,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./book-search.component.css'],
 })
 export class BookSearchComponent implements OnInit {
+  @Input() bookRef: any;
   meditationBooks: any;
+  book: any;
 
-  constructor(private service: BooksService, private router: Router) {}
+  constructor(
+    private service: BooksService,
+    private router: Router,
+    private favsService: FavoritesService
+  ) {}
 
   ngOnInit(): void {}
 
@@ -20,6 +27,10 @@ export class BookSearchComponent implements OnInit {
       this.meditationBooks = response.items;
       console.log(response.items);
     });
+  };
+
+  addToFavorites = (book) => {
+    this.favsService.addToBooksFavorites(book);
   };
 
   searchBooks = (form: NgForm): any => {

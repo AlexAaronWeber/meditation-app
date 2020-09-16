@@ -14,9 +14,23 @@ export class FavoritesService {
     this.favoriteMusic.push(music);
     console.log(this.favoriteMusic);
   };
+  addToMeditationsFavorites = (meditation: any) => {
+    this.favoriteMeditation.push(meditation);
+    console.log(this.favoriteMeditation);
+  };
+  addToBooksFavorites = (book: any) => {
+    this.favoriteBooks.push(book);
+    console.log(this.favoriteBooks);
+  };
 
   getFavorites = (): any => {
     return this.favoriteMusic;
+  };
+  getMedFavorites = (): any => {
+    return this.favoriteMeditation;
+  };
+  getBookFavorites = (): any => {
+    return this.favoriteBooks;
   };
 
   deleteFavorite = (index: number) => {

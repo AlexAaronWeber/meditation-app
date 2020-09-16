@@ -7,7 +7,9 @@ import { FavoritesService } from '../favorites.service';
   styleUrls: ['./fav-med.component.css'],
 })
 export class FavMedComponent implements OnInit {
-  @Input() meditationRef: any;
+  @Input() meditationsRef: any;
+
+  meditationsFavs: any[] = [];
 
   constructor(private service: FavoritesService) {}
 

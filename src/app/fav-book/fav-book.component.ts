@@ -9,6 +9,8 @@ import { FavoritesService } from '../favorites.service';
 export class FavBookComponent implements OnInit {
   @Input() bookRef: any;
 
+  bookFavs: any[] = [];
+
   constructor(private service: FavoritesService) {}
 
   ngOnInit(): void {}

@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { MeditationService } from '../meditation.service';
 import { DomSanitizer } from '@angular/platform-browser';
 import { NgForm } from '@angular/forms';
+import { FavoritesService } from '../favorites.service';
 
 @Component({
   selector: 'app-med-search',
@@ -9,11 +10,15 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./med-search.component.css'],
 })
 export class MedSearchComponent implements OnInit {
+  @Input() meditationRef: any;
+  @Output() showInfo = new EventEmitter<any>();
   meditationsVideos: any;
   meditations: any;
+  meditation: any;
   constructor(
     private service: MeditationService,
-    private sanitizer: DomSanitizer
+    private sanitizer: DomSanitizer,
+    private favsService: FavoritesService
   ) {}
 
   ngOnInit(): void {
@@ -36,9 +41,7 @@ export class MedSearchComponent implements OnInit {
     });
   };
 
-  getPlaceHolderVids = () => {
-    this.meditationsVideos = this.service.getPlaceHolderVids().items;
-    this.sanitize();
-    console.log(this.meditationsVideos);
+  addToFavorites = (meditation) => {
+    this.favsService.addToMeditationsFavorites(meditation);
   };
 }

@@ -17,4 +17,5 @@
   <p>{{ meditationBooks[i].volumeInfo.authors }}</p>
   <img src="{{ meditationBooks[i].volumeInfo.imageLinks.thumbnail }}" alt="" />
   <p>{{ meditationBooks[i].volumeInfo.description }}</p>
+  <button (click)="addToFavorites(book)">Add to Favorites</button>
 </div>
