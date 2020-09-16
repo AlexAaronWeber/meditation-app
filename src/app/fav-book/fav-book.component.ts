@@ -14,4 +14,8 @@ export class FavBookComponent implements OnInit {
   constructor(private service: FavoritesService) {}
 
   ngOnInit(): void {}
+
+  deleteBookFavorite = (fav: any) => {
+    this.service.deleteBookFavorite(fav);
+  };
 }

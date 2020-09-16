@@ -8,7 +8,6 @@ import { FavoritesService } from '../favorites.service';
 })
 export class FavoritesComponent implements OnInit {
   showIndex: number;
-  favorites: any[] = [];
   musicFavs: any[] = [];
   meditationFavs: any[] = [];
   bookFavs: any[] = [];
@@ -32,4 +31,13 @@ export class FavoritesComponent implements OnInit {
     this.bookFavs = this.service.getBookFavorites();
     console.log('this is the books favs', this.bookFavs);
   };
+
+  //Delete functions
+  // deleteMusicFavorite = (index: number) => {
+  //   this.musicFavs.splice(index, 1);
+  // };
+
+  // deleteMusicFavorite = (fav: any) => {
+  //   this.musicFavs.deleteFavorite(fav);
+  // };
 }

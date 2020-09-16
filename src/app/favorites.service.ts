@@ -5,8 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class FavoritesService {
   favoriteMusic: any[] = [];
-  favoriteMeditation: any = [];
-  favoriteBooks: any = [];
+  favoriteMeditation: any[] = [];
+  favoriteBooks: any[] = [];
 
   constructor() {}
 
@@ -35,5 +35,11 @@ export class FavoritesService {
 
   deleteFavorite = (index: number) => {
     this.favoriteMusic.splice(index, 1);
+  };
+  deleteMedFavorite = (index: number) => {
+    this.favoriteMeditation.splice(index, 1);
+  };
+  deleteBookFavorite = (index: number) => {
+    this.favoriteBooks.splice(index, 1);
   };
 }

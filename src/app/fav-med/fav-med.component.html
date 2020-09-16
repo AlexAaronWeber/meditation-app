@@ -1,9 +1,12 @@
-<youtube-player
-  videoId="{{ meditationsRef.id.videoId }}"
-  suggestedQuality="highres"
-  [height]="250"
-  [width]="500"
-  [startSeconds]="'0'"
-  [endSeconds]=""
->
-</youtube-player>
+<div>
+  <youtube-player
+    videoId="{{ meditationsRef.id.videoId }}"
+    suggestedQuality="highres"
+    [height]="250"
+    [width]="500"
+    [startSeconds]="'0'"
+    [endSeconds]=""
+  >
+  </youtube-player>
+  <button (click)="deleteMeditationFavorite(meditationsRef)">Delete</button>
+</div>

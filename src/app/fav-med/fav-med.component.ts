@@ -14,4 +14,8 @@ export class FavMedComponent implements OnInit {
   constructor(private service: FavoritesService) {}
 
   ngOnInit(): void {}
+
+  deleteMeditationFavorite = (fav: any) => {
+    this.service.deleteMedFavorite(fav);
+  };
 }

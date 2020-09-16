@@ -22,4 +22,8 @@ export class FavMusComponent implements OnInit {
   //   this.musicFavs = this.service.getFavorites();
   //   console.log('this is the favs', this.musicFavs);
   // };
+
+  deleteMusicFavorite = (fav: any) => {
+    this.service.deleteFavorite(fav);
+  };
 }
