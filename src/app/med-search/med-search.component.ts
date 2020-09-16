@@ -21,9 +21,7 @@ export class MedSearchComponent implements OnInit {
     private favsService: FavoritesService
   ) {}
 
-  ngOnInit(): void {
-    //this.getPlaceHolderVids();
-  }
+  ngOnInit(): void {}
 
   getVideos = (form: NgForm): any => {
     this.service.getMeditations(form.value.meditation).subscribe((response) => {
