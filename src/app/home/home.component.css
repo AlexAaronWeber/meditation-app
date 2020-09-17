@@ -33,6 +33,11 @@ main {
   background-color: white;
 }
 
+.middle-header {
+  font-size: 12px;
+  text-align: center;
+}
+
 @media screen and (min-width: 768px) {
   .hidden {
     display: inline;
@@ -40,5 +45,24 @@ main {
 
   .home {
     overflow: hidden;
+    display: flex;
+  }
+
+  .card-container {
+    flex: 1;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+  }
+
+  .main-cards {
+    cursor: pointer;
+    margin: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .middle-header {
+    font-size: 24px;
   }
 }

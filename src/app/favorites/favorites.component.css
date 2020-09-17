@@ -1,3 +1,9 @@
+main {
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
 .card-container {
   overflow: scroll;
 }
@@ -10,5 +16,27 @@
   background-color: white;
 }
 
+.main-cards {
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
+}
+
+.h5 {
+  cursor: pointer;
+}
+
 @media screen and (min-width: 768px) {
+  .card-container {
+    display: flex;
+  }
+
+  .main-cards {
+    flex: 1;
+    height: 700px;
+    overflow: scroll;
+    border: 1px solid black;
+    padding: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
 }

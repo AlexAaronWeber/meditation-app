@@ -1,45 +1,52 @@
 <app-header></app-header>
-<main class="card-container">
-  <!-- meditations -->
-  <div class="main-cards">
-    <h1>Your Favorites meditation techniques!</h1>
-    <app-fav-med
-      *ngFor="let favorite of meditationFavs; index as i"
-      [meditationsRef]="favorite"
-      (deleted)="deleteMeditationFavorite(i)"
-    >
-    </app-fav-med>
-    <h2 *ngIf="meditationFavs.length === 0" routerLink="/meditations">
-      Click Here to Add Meditations to your Favorites!
-    </h2>
-  </div>
+<main>
+  <section class="card-container">
+    <!-- meditations -->
+    <div class="main-cards">
+      <h3>Your favorite meditation techniques</h3>
+      <app-fav-med
+        *ngFor="let favorite of meditationFavs; index as i"
+        [meditationsRef]="favorite"
+        (deleted)="deleteMeditationFavorite(i)"
+      >
+      </app-fav-med>
+      <h5
+        class="h5"
+        *ngIf="meditationFavs.length === 0"
+        routerLink="/meditations"
+      >
+        Click Here to Add Meditations to your Favorites!
+      </h5>
+    </div>
 
-  <!-- music -->
-  <div class="main-cards">
-    <h1>Listen to your favorite soothing music!</h1>
-    <app-fav-mus
-      *ngFor="let favorite of musicFavs; index as i"
-      [musicRef]="favorite"
-      (deleted)="deleteMusicFavorite(i)"
-    >
-    </app-fav-mus>
-    <h2 *ngIf="musicFavs.length === 0" routerLink="/music">
-      Click Here to Add Music to your Favorites!
-    </h2>
-  </div>
+    <!-- music -->
+    <div class="main-cards">
+      <h3>Your favorite soothing music</h3>
+      <app-fav-mus
+        *ngFor="let favorite of musicFavs; index as i"
+        [musicRef]="favorite"
+        (deleted)="deleteMusicFavorite(i)"
+      >
+      </app-fav-mus>
+      <h5 class="h5" *ngIf="musicFavs.length === 0" routerLink="/music">
+        Click Here to Add Music to your Favorites!
+      </h5>
+    </div>
 
-  <!-- books -->
-  <div class="main-cards">
-    <h1>Check out your favorite books on mental health!</h1>
-    <app-fav-book
-      *ngFor="let favorite of bookFavs; index as i"
-      [bookRef]="favorite"
-      (deleted)="deleteBookFavorite(i)"
-    >
-    </app-fav-book>
-    <h2 *ngIf="bookFavs.length === 0" routerLink="/book">
-      Click Here to Add Books to your Favorites!
-    </h2>
-  </div>
+    <!-- books -->
+    <div class="main-cards">
+      <h3>Your favorite books on mental health</h3>
+      <app-fav-book
+        *ngFor="let favorite of bookFavs; index as i"
+        [bookRef]="favorite"
+        (deleted)="deleteBookFavorite(i)"
+      >
+      </app-fav-book>
+      <h5 class="h5" *ngIf="bookFavs.length === 0" routerLink="/book">
+        Click Here to Add Books to your Favorites!
+      </h5>
+    </div>
+  </section>
 </main>
+<div></div>
 <app-footer class="footer"></app-footer>

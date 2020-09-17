@@ -5,6 +5,9 @@
   </div>
 
   <section class="card-container">
+    <h2 class="middle-header">
+      "Knowing others is wisdom; Knowing the self is enlightenment" -Lao Tzu
+    </h2>
     <div class="main-cards" routerLink="/meditations">
       <h3>Find Meditation Techniques</h3>
       <p>Click here to search for great meditation techniques</p>
@@ -20,8 +23,10 @@
       <p>Click here to search for informative books</p>
     </div>
   </section>
-  <app-bored></app-bored>
-  <app-mod class="mod hidden"></app-mod>
+  <div class="mod-bored">
+    <app-mod class="mod hidden"></app-mod>
+    <app-bored></app-bored>
+  </div>
 </main>
 
 <app-footer class="footer"></app-footer>

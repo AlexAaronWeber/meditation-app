@@ -9,13 +9,14 @@ export class MusicService {
   brandonKey: string = 'AIzaSyBAU64ophkz8C4KY1z15G-YjFav_DqnRp8';
   troyKey: string = 'AIzaSyCariktb8hHfDYmmGcFoBsGec3mx9YsThM';
   alexKey: string = 'AIzaSyBJxMoabGco8PZBpHBt1UyMrTMJ3nK-vOk';
+  auxKey: string = 'AIzaSyCrvNcuOodQMqHWCrQ5AGCXZGerp2yGiLg';
 
   constructor(private http: HttpClient) {}
 
   getMusic = (subject: string): any => {
     return this.http.get(this.baseUrlMusic, {
       params: {
-        key: this.alexKey,
+        key: this.troyKey,
         q: subject,
         part: 'snippet',
         maxResults: '15',
