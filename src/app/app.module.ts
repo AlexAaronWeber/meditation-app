@@ -18,6 +18,7 @@ import { FavMusComponent } from './fav-mus/fav-mus.component';
 import { FavMedComponent } from './fav-med/fav-med.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { YouTubePlayerModule } from '@angular/youtube-player';
+import { FooterComponent } from './footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +35,7 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
     FavMusComponent,
     FavMedComponent,
     NotFoundComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,15 +1,20 @@
 <app-header></app-header>
+<p class="books-description">
+  Discover books written by experts in the field of mental health to help guide
+  you through your struggles
+</p>
 
 <form #bookForm="ngForm" (ngSubmit)="getBooks(bookForm)">
-  <label for="books">Book Search</label>
+  <label for="books">What are you feeling?</label>
   <select id="books" name="books" ngModel>
     <option value="stress">Stress</option>
     <option value="anxiety">Anxiety</option>
     <option value="depression">Depression</option>
-    <option value="fear">Fear</option>
+    <option value="meditation">Meditation</option>
+    <option value="insomnia">Sleep</option>
   </select>
 
-  <button>Submit</button>
+  <button class="book-btn">Discover</button>
 </form>
 
 <div *ngFor="let book of meditationBooks; index as i">
@@ -19,3 +24,4 @@
   <p>{{ meditationBooks[i].volumeInfo.description }}</p>
   <button (click)="addToFavorites(book)">Add to Favorites</button>
 </div>
+<app-footer class="footer"></app-footer>

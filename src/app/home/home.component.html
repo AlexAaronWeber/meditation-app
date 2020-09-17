@@ -1,24 +1,27 @@
 <app-header></app-header>
-
-<div class="scroll-bar">
-  <app-book-bar></app-book-bar>
-</div>
-
-<app-mod></app-mod>
-<main class="card-container">
-  <div class="main-cards" routerLink="/meditations">
-    <p>Find Meditation Techniques!</p>
-    <p>Click here to search for great meditation techniques!</p>
+<main class="home">
+  <div class="scroll-bar hidden">
+    <app-book-bar></app-book-bar>
   </div>
 
-  <div class="main-cards" routerLink="/music">
-    <p>Listen to Soothing music!</p>
-    <p>Click here to get relaxing music recommendations!</p>
-  </div>
+  <section class="card-container">
+    <div class="main-cards" routerLink="/meditations">
+      <h3>Find Meditation Techniques</h3>
+      <p>Click here to search for great meditation techniques</p>
+    </div>
 
-  <div class="main-cards" routerLink="/book">
-    <p>Top Books on Mental Health!</p>
-    <p>Click here to search for informative books!</p>
-  </div>
+    <div class="main-cards" routerLink="/music">
+      <h3>Listen to Soothing music</h3>
+      <p>Click here to get relaxing music recommendations</p>
+    </div>
+
+    <div class="main-cards" routerLink="/book">
+      <h3>Top Books on Mental Health</h3>
+      <p>Click here to search for informative books</p>
+    </div>
+  </section>
+  <app-bored></app-bored>
+  <app-mod class="mod hidden"></app-mod>
 </main>
-<app-bored></app-bored>
+
+<app-footer class="footer"></app-footer>

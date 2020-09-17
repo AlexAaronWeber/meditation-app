@@ -3,13 +3,42 @@ main {
   padding: 0;
 }
 
+.home {
+  overflow: scroll;
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
 .main-cards {
   border: 1px solid black;
   margin: 5px;
-  width: 60%;
+  text-align: center;
 }
 
 .scroll-box {
   height: 100px;
   overflow: scroll;
+}
+
+.hidden {
+  display: none;
+}
+
+.footer {
+  border-top: 2px solid black;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  background-color: white;
+}
+
+@media screen and (min-width: 768px) {
+  .hidden {
+    display: inline;
+  }
+
+  .home {
+    overflow: hidden;
+  }
 }
