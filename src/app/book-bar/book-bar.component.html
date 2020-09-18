@@ -1,14 +1,17 @@
-<div class="scroll-box">
-  <div class="background">
-    <h5 class="selected">Selected Books on Meditation!</h5>
-    <div *ngFor="let book of meditationBooks; index as i">
-      <p>{{ meditationBooks[i].volumeInfo.title }}</p>
-      <p>{{ meditationBooks[i].volumeInfo.authors }}</p>
-      <img
-        src="{{ meditationBooks[i].volumeInfo.imageLinks.thumbnail }}"
-        alt=""
-      />
-      <button (click)="addToFavorites(book)">Add to Favorites</button>
+<div>
+  <h5 class="heading">Selected Books on Meditation!</h5>
+  <div class="scroll-box">
+    <div class="background">
+      <div class="space-the-final-frontier"></div>
+      <div *ngFor="let book of meditationBooks; index as i" class="books">
+        <p>{{ meditationBooks[i].volumeInfo.title }}</p>
+        <p>{{ meditationBooks[i].volumeInfo.authors }}</p>
+        <img
+          src="{{ meditationBooks[i].volumeInfo.imageLinks.thumbnail }}"
+          alt=""
+        />
+        <button (click)="addToFavorites(book)">Add to Favorites</button>
+      </div>
     </div>
   </div>
 </div>

@@ -1,22 +1,33 @@
-@media screen and (min-width: 768px) {
+.heading {
+  position: absolute;
+  width: 200px;
+  background-color: rgba(255, 255, 255, 1);
+  margin-top: 0;
+  padding-top: 2px;
+  border-bottom: 3px solid black;
+  text-align: center;
+  font-size: 16px;
 }
+
 .scroll-box {
   height: 600px;
   width: 200px;
   overflow: scroll;
   border: 1px solid black;
-  padding: 2px;
+  padding-top: 0px;
   margin-left: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: rgba(76, 175, 80, 0.3);
-  /* opacity: 0.6; */
+  border-radius: 5px;
+}
+
+.position {
+  position: relative;
+}
+
+.space-the-final-frontier {
+  height: 20px;
 }
 .background {
   opacity: 1;
-}
-
-.selected {
-  border-bottom: 1px solid black;
-  text-align: center;
-  font-size: 16px;
 }
