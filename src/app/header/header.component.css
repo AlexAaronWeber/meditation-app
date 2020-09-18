@@ -6,7 +6,7 @@
   margin-bottom: 20px;
   display: flex;
   justify-content: center;
-  background-color: #3eb8da;
+  background-color: rgba(76, 175, 80, 0.3);
   color: #f1ffb8;
 }
 
@@ -38,25 +38,28 @@
     margin-bottom: 20px;
     display: flex;
     justify-content: start;
-    background-color: #3eb8da;
-    color: #f1ffb8;
+    background-color: rgba(76, 175, 80, 0.3);
+    color: #07367d;
   }
 
   .nav-btn {
     display: inline;
     margin-left: 20px;
-    background-color: #f1ffb8;
+    color: #07367d;
     border-radius: 5px;
   }
 
   .nav-btn:hover {
-    background-color: #07367d;
     color: white;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    transition: ease-in-out 0.3s;
   }
 
   .Title:hover {
-    color: #07367d;
-    transition: ease-in-out 0.5s;
+    color: white;
+    transition: ease-in-out 0.3s;
   }
 
   /* Dropdown Content (Hidden by Default) */
@@ -67,24 +70,25 @@
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    transition: ease-in-out 0.3s;
   }
 
   .nav-btn {
-    margin-left: 20px;
-    height: 50px;
-    background-color: #f1ffb8;
-    border-radius: 5px;
+    font-size: 20px;
+    color: #07367d;
     cursor: pointer;
+    border: none;
+    background-color: transparent;
   }
 
   .dropbtn {
-    background-color: #f1ffb8;
-    margin-left: 20px;
-    height: 50px;
-    border-radius: 5px;
+    font-size: 20px;
+    color: #07367d;
     cursor: pointer;
+    border: none;
+    background-color: transparent;
+    transition: ease-in-out 0.3s;
   }
-
   /* The container <div> - needed to position the dropdown content */
   .dropdown {
     position: relative;
@@ -102,12 +106,14 @@
     font-family: futura-pt, sans-serif;
     font-weight: 500;
     font-style: normal;
+    transition: ease-in-out 0.3s;
   }
 
   /* Change the background color of the dropdown button when the dropdown content is shown */
   .dropdown:hover .dropbtn {
-    background-color: #07367d;
-    color: white;
+    background-color: white;
+    color: black;
+    transition: ease-in-out 0.3s;
   }
 
   /* Links inside the dropdown */
@@ -121,11 +127,13 @@
   /* Change color of dropdown links on hover */
   .dropdown-content a:hover {
     background-color: #ddd;
+    transition: ease-in-out 0.3s;
   }
 
   /* Show the dropdown menu on hover */
   .dropdown:hover .dropdown-content {
     display: block;
+    transition: ease-in-out 0.3s;
   }
 
   button {
@@ -140,6 +148,13 @@
   }
   .buttons {
     display: flex;
+    align-items: center;
+  }
+  .icon {
+    display: flex;
+    height: 60px;
+    width: 60px;
+    padding: 10px;
     align-items: center;
   }
 }

@@ -13,7 +13,7 @@ export class MusSearchComponent implements OnInit {
   musicVideos: any;
   music: any;
   favorites: any = [];
-
+  isFavorite: boolean = false;
   constructor(
     private service: MusicService,
     private favsService: FavoritesService
@@ -31,6 +31,9 @@ export class MusSearchComponent implements OnInit {
   };
 
   addToFavorites = (music) => {
+    // if (this.isFavorite === false) {
+    //   this.isFavorite = true;
     this.favsService.addToMusicFavorites(music);
   };
+  // };
 }
