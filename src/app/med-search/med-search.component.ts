@@ -15,6 +15,7 @@ export class MedSearchComponent implements OnInit {
   meditationsVideos: any;
   meditations: any;
   meditation: any;
+  isFavorite: boolean = false;
   constructor(
     private service: MeditationService,
     private sanitizer: DomSanitizer,
@@ -40,6 +41,9 @@ export class MedSearchComponent implements OnInit {
   };
 
   addToFavorites = (meditation) => {
+    // if (this.isFavorite === false) {
+    //   this.isFavorite = true;
     this.favsService.addToMeditationsFavorites(meditation);
   };
+  // };
 }
