@@ -8,7 +8,7 @@ export class MusicService {
   baseUrlMusic: string = 'https://www.googleapis.com/youtube/v3/search';
   brandonKey: string = 'AIzaSyBAU64ophkz8C4KY1z15G-YjFav_DqnRp8';
   troyKey: string = 'AIzaSyCariktb8hHfDYmmGcFoBsGec3mx9YsThM';
-  alexKey: string = 'AIzaSyBJxMoabGco8PZBpHBt1UyMrTMJ3nK-vOk';
+  alexKey: string = 'AIzaSyDuMN9t9H0qix9MKhaKt_woH_BSNQUV7y0';
   auxKey: string = 'AIzaSyCrvNcuOodQMqHWCrQ5AGCXZGerp2yGiLg';
 
   constructor(private http: HttpClient) {}
