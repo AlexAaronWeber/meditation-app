@@ -10,8 +10,8 @@ export class MeditationService {
   videoBaseUrl: string = 'https://www.googleapis.com/youtube/v3/videos/list';
   brandonKey: string = 'AIzaSyBAU64ophkz8C4KY1z15G-YjFav_DqnRp8';
   troyKey: string = 'AIzaSyCariktb8hHfDYmmGcFoBsGec3mx9YsThM';
-  alexKey: string = 'AIzaSyBJxMoabGco8PZBpHBt1UyMrTMJ3nK-vOk';
-  auxKey: string = 'AIzaSyCrvNcuOodQMqHWCrQ5AGCXZGerp2yGiLg';
+  alexKey: string = 'AIzaSyDuMN9t9H0qix9MKhaKt_woH_BSNQUV7y0';
+  auxKey: string = 'AIzaSyDr-qYW7RZj3iVEufzwMD3llhuUJmyLviU';
   keyword: string;
 
   modVideos: any = {
