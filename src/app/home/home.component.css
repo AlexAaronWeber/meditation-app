@@ -18,6 +18,13 @@ main {
   background-color: rgba(76, 175, 80, 0.3);
 }
 
+.main-cards:hover {
+  border: 1px solid black;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: ease-in-out 0.3s;
+}
+
 .scroll-box {
   height: 100px;
   overflow: scroll;
