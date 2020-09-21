@@ -8,12 +8,15 @@
   justify-content: center;
   background-color: rgba(76, 175, 80, 0.3);
   color: #07367d;
+  width: 100%;
 }
 
 .Title {
   cursor: pointer;
+  justify-content: center;
   display: flex;
   font-size: 45px;
+  margin-left: 25px;
   font-family: "Righteous", cursive;
 }
 
@@ -26,7 +29,13 @@
   position: relative;
   display: none;
 }
-
+.icon {
+  display: flex;
+  height: 60px;
+  width: 60px;
+  padding-top: 30px;
+  align-items: center;
+}
 @media screen and (min-width: 768px) {
   .Title {
     margin-left: 10px;
@@ -35,7 +44,7 @@
     margin: 0;
     padding: 0;
     border-bottom: 5px solid black;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     display: flex;
     justify-content: start;
     background-color: rgba(76, 175, 80, 0.3);
@@ -148,13 +157,6 @@
   }
   .buttons {
     display: flex;
-    align-items: center;
-  }
-  .icon {
-    display: flex;
-    height: 60px;
-    width: 60px;
-    padding: 10px;
     align-items: center;
   }
 }

@@ -1,11 +1,10 @@
 <app-header></app-header>
-<p>Listen to soothing music!</p>
 <form
   ngNativeValidate
   #musicForm="ngForm"
   (ngSubmit)="getMusicVideos(musicForm)"
 >
-  <label for="music">music Search</label>
+  <label for="music" class="mus-search">Music Search</label>
   <select id="music" name="music" ngModel required>
     <option value="" disabled selected></option>
     <option value="live meditation music">Live Broadcast</option>
@@ -16,19 +15,23 @@
   </select>
   <button class="music-btn">Submit</button>
 </form>
+<section class="big-container">
+  <div class="mus-container" *ngFor="let music of musicVideos">
+    <p class="mus-title">{{ music.snippet.title }}</p>
+    <youtube-player
+      videoId="{{ music.id.videoId }}"
+      suggestedQuality="highres"
+      [height]="250"
+      [width]="380"
+      [startSeconds]="'0'"
+      [endSeconds]=""
+    >
+    </youtube-player>
+    <button class="mus-btn" (click)="addToFavorites(music)">
+      Add to Favorites
+    </button>
+  </div>
+</section>
 
-<div *ngFor="let music of musicVideos">
-  <p>{{ music.snippet.title }}</p>
-  <youtube-player
-    videoId="{{ music.id.videoId }}"
-    suggestedQuality="highres"
-    [height]="250"
-    [width]="500"
-    [startSeconds]="'0'"
-    [endSeconds]=""
-  >
-  </youtube-player>
-  <button (click)="addToFavorites(music)">Add to Favorites</button>
-</div>
 <div class="filler"></div>
 <app-footer class="footer"></app-footer>

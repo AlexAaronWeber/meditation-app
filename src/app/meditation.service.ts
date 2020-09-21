@@ -9,6 +9,7 @@ export class MeditationService {
   baseUrlMeditations: string = 'https://www.googleapis.com/youtube/v3/search';
   videoBaseUrl: string = 'https://www.googleapis.com/youtube/v3/videos/list';
   brandonKey: string = 'AIzaSyBAU64ophkz8C4KY1z15G-YjFav_DqnRp8';
+  newKey: string = 'AIzaSyCBKaKWLOym4eNmN5GwPEjCKkni8k6KwqM';
   troyKey: string = 'AIzaSyCariktb8hHfDYmmGcFoBsGec3mx9YsThM';
   alexKey: string = 'AIzaSyDuMN9t9H0qix9MKhaKt_woH_BSNQUV7y0';
   auxKey: string = 'AIzaSyDr-qYW7RZj3iVEufzwMD3llhuUJmyLviU';
@@ -492,7 +493,7 @@ export class MeditationService {
   getMeditations = (subject: string): any => {
     return this.http.get(this.baseUrlMeditations, {
       params: {
-        key: this.troyKey,
+        key: this.newKey,
         q: subject,
         part: 'snippet',
         maxResults: '15',
