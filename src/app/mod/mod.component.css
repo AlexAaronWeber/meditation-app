@@ -1,10 +1,14 @@
 @media screen and (min-width: 768px) {
   .border {
     border: 1px solid black;
+    border-radius: 5px;
     padding: 5px;
     margin-right: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
     background-color: rgba(76, 175, 80, 0.3);
+  }
+
+  .mod {
+    text-align: center;
   }
 }

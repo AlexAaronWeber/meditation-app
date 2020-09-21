@@ -1,6 +1,10 @@
 <app-header></app-header>
-<form #meditationForm="ngForm" (ngSubmit)="getVideos(meditationForm)">
-  <label for="meditation">Meditation Search</label>
+<form
+  ngNativeValidate
+  #meditationForm="ngForm"
+  (ngSubmit)="getVideos(meditationForm)"
+>
+  <label for="meditation" class="med-search">Meditation Search</label>
   <select id="meditation" required name="meditation" ngModel>
     <option value="guided stress meditation">Stress</option>
     <option value="guided anxiety meditation">Anxiety</option>
@@ -10,28 +14,25 @@
     <option value="guided anger meditation">Anger</option>
   </select>
 
-  <!-- <label for="duration">Length</label>
-  <select id="duration" name="duration" ngModel>
-    <option value="fiveMinutes">5 minutes</option>
-    <option value="tenMinutes">10 minutes</option>
-    <option value="fifteenMinutes">15 minutes</option>
-    <option value="twentyMinutes">20 minutes</option>
-  </select> -->
-
   <button class="med-btn">Submit</button>
 </form>
 
-<div *ngFor="let meditation of meditationsVideos">
-  <p>{{ meditation.snippet.title }}</p>
-  <youtube-player
-    videoId="{{ meditation.id.videoId }}"
-    suggestedQuality="highres"
-    [height]="250"
-    [width]="500"
-    [startSeconds]="'0'"
-    [endSeconds]=""
-  >
-  </youtube-player>
-  <button (click)="addToFavorites(meditation)">Add to Favorites</button>
-</div>
+<section class="big-container">
+  <div class="med-container" *ngFor="let meditation of meditationsVideos">
+    <p class="med-title">{{ meditation.snippet.title }}</p>
+    <youtube-player
+      videoId="{{ meditation.id.videoId }}"
+      suggestedQuality="highres"
+      [height]="250"
+      [width]="380"
+      [startSeconds]="'0'"
+      [endSeconds]=""
+    >
+    </youtube-player>
+    <button class="med-btn" (click)="addToFavorites(meditation)">
+      Add to Favorites
+    </button>
+  </div>
+</section>
+<div class="filler"></div>
 <app-footer class="footer"></app-footer>

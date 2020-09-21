@@ -8,6 +8,9 @@
 
 .books-description {
   text-align: center;
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .book-btn {
@@ -22,6 +25,19 @@
   padding: 10px;
   background-color: rgba(76, 175, 80, 0.3);
   text-align: center;
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.book-label {
+  margin: 10px;
+  padding: 10px;
+  background-color: rgb(255, 255, 255, 0.6);
+  border-radius: 5px;
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .book-info {
@@ -36,7 +52,11 @@
 
 .book-btn {
   margin: 10px;
+  border-radius: 5px;
   background-color: white;
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 .filler {

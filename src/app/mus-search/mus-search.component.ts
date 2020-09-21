@@ -19,7 +19,16 @@ export class MusSearchComponent implements OnInit {
     private favsService: FavoritesService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    // this.getMusicVideosDefault('meditation music');
+  }
+
+  getMusicVideosDefault = (string): any => {
+    this.service.getMusic(string).subscribe((response) => {
+      this.musicVideos = response.items;
+      // console.log(response);
+    });
+  };
 
   getMusicVideos = (form: NgForm): any => {
     this.service.getMusic(form.value.music).subscribe((response) => {

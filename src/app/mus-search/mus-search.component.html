@@ -1,8 +1,12 @@
 <app-header></app-header>
 <p>Listen to soothing music!</p>
-<form #musicForm="ngForm" (ngSubmit)="getMusicVideos(musicForm)">
+<form
+  ngNativeValidate
+  #musicForm="ngForm"
+  (ngSubmit)="getMusicVideos(musicForm)"
+>
   <label for="music">music Search</label>
-  <select id="music" name="music" ngModel>
+  <select id="music" name="music" ngModel required>
     <option value="" disabled selected></option>
     <option value="live meditation music">Live Broadcast</option>
     <option value="acoustic newage music">Stress</option>
@@ -26,4 +30,5 @@
   </youtube-player>
   <button (click)="addToFavorites(music)">Add to Favorites</button>
 </div>
+<div class="filler"></div>
 <app-footer class="footer"></app-footer>

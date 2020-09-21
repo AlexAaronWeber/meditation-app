@@ -4,11 +4,11 @@
   you through your struggles
 </p>
 
-<form #bookForm="ngForm" (ngSubmit)="getBooks(bookForm)">
-  <label for="books">What are you feeling?</label>
-  <select required id="books" name="books" ngModel>
+<form ngNativeValidate #bookForm="ngForm" (ngSubmit)="getBooks(bookForm)">
+  <label class="book-label" for="books">What are you feeling?</label>
+  <select id="books" name="books" ngModel required>
     <option value="stress">Stress</option>
-    <option value="anxiety">Anxiety</option>
+    <option value="anxiety | self-esteem">Anxiety</option>
     <option value="depression">Depression</option>
     <option value="meditation">Meditation</option>
     <option value="insomnia">Sleep</option>

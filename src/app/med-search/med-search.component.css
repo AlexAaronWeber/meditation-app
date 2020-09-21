@@ -6,10 +6,48 @@
   background-color: white;
 }
 
-.med-btn {
-  background: none;
+.med-search {
+  background-color: rgb(255, 255, 255, 0.6);
+  border-radius: 5px;
+  margin: 5px;
+  padding: 7px;
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.med-container {
+  border: 1px solid black;
+  height: 400px;
+  width: 390px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255, 0.6);
   margin: 10px;
+  text-align: center;
+}
+
+.med-btn {
+  margin: 10px;
+  border-radius: 5px;
+  background-color: white;
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.med-title {
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.filler {
+  height: 75px;
 }
 
 @media screen and (min-width: 768px) {
+  .big-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
