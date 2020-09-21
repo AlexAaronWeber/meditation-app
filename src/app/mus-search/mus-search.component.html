@@ -13,6 +13,7 @@
 </form>
 
 <div *ngFor="let music of musicVideos">
+  <p>{{ music.snippet.title }}</p>
   <youtube-player
     videoId="{{ music.id.videoId }}"
     suggestedQuality="highres"

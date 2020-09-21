@@ -238,42 +238,6 @@ export class MeditationService {
       },
       {
         kind: 'youtube#searchResult',
-        etag: '_HHWUAyabG7AV8NET6vENo3XZSw',
-        id: {
-          kind: 'youtube#video',
-          videoId: 'M3GjxQrPeZo',
-        },
-        snippet: {
-          publishedAt: '2020-09-13T17:29:46Z',
-          channelId: 'UC1bjWVLp2aaJmPcNbi9OOsw',
-          title:
-            'Happiness Meditation Music - Binaural Beats Music for Serotonin Release, Happiness Frequency',
-          description:
-            'Happiness Meditation Music - Binaural Beats Music for Serotonin Release, Happiness Frequency ...',
-          thumbnails: {
-            default: {
-              url: 'https://i.ytimg.com/vi/M3GjxQrPeZo/default_live.jpg',
-              width: 120,
-              height: 90,
-            },
-            medium: {
-              url: 'https://i.ytimg.com/vi/M3GjxQrPeZo/mqdefault_live.jpg',
-              width: 320,
-              height: 180,
-            },
-            high: {
-              url: 'https://i.ytimg.com/vi/M3GjxQrPeZo/hqdefault_live.jpg',
-              width: 480,
-              height: 360,
-            },
-          },
-          channelTitle: 'Greenred Productions - Relaxing Music',
-          liveBroadcastContent: 'live',
-          publishTime: '2020-09-13T17:29:46Z',
-        },
-      },
-      {
-        kind: 'youtube#searchResult',
         etag: '0viWyhJ-IbB8ZpQ61-Ss6iH3eos',
         id: {
           kind: 'youtube#video',
@@ -343,38 +307,7 @@ export class MeditationService {
           publishTime: '2017-02-14T08:27:52Z',
         },
       },
-      {
-        kind: 'youtube#searchResult',
-        etag: 'T0Lc0LZhLRGIC43-7KbfhWTfAZY',
-        id: {
-          kind: 'youtube#channel',
-          channelId: 'UC9GoqHypa-SDrGPMyeBkjKw',
-        },
-        snippet: {
-          publishedAt: '2011-09-05T02:13:14Z',
-          channelId: 'UC9GoqHypa-SDrGPMyeBkjKw',
-          title: 'Michael Sealey',
-          description:
-            'Hypnosis | Hypnotherapy | Guided Meditation | Sleep Meditation Hi, my name is Michael and welcome to my channel, where I hope you can stop by to relax, ...',
-          thumbnails: {
-            default: {
-              url:
-                'https://yt3.ggpht.com/-uVcXKZ8YWtg/AAAAAAAAAAI/AAAAAAAAAAA/GNJz0DbQD0U/s88-c-k-no-mo-rj-c0xffffff/photo.jpg',
-            },
-            medium: {
-              url:
-                'https://yt3.ggpht.com/-uVcXKZ8YWtg/AAAAAAAAAAI/AAAAAAAAAAA/GNJz0DbQD0U/s240-c-k-no-mo-rj-c0xffffff/photo.jpg',
-            },
-            high: {
-              url:
-                'https://yt3.ggpht.com/-uVcXKZ8YWtg/AAAAAAAAAAI/AAAAAAAAAAA/GNJz0DbQD0U/s800-c-k-no-mo-rj-c0xffffff/photo.jpg',
-            },
-          },
-          channelTitle: 'Michael Sealey',
-          liveBroadcastContent: 'none',
-          publishTime: '2011-09-05T02:13:14Z',
-        },
-      },
+
       {
         kind: 'youtube#searchResult',
         etag: 'TXQFAw0jRx77OTy52PuEXZabCBU',
