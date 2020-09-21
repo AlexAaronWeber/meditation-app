@@ -2,8 +2,8 @@
 <p>Listen to soothing music!</p>
 <form #musicForm="ngForm" (ngSubmit)="getMusicVideos(musicForm)">
   <label for="music">music Search</label>
-  <select id="music" required="required" name="music" ngModel>
-    <option value="">- - Select - -</option>
+  <select id="music" name="music" ngModel>
+    <option value="" disabled selected></option>
     <option value="live meditation music">Live Broadcast</option>
     <option value="acoustic newage music">Stress</option>
     <option value="anxiety reduction instrumental">Anxiety</option>
