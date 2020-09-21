@@ -12,6 +12,7 @@ main {
 
 .main-cards {
   border: 1px solid black;
+  border-radius: 5px;
   margin: 5px;
   text-align: center;
   background-color: rgba(76, 175, 80, 0.3);
@@ -59,7 +60,7 @@ main {
   .main-cards {
     cursor: pointer;
     margin: 10px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
