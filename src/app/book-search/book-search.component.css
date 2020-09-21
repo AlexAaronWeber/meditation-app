@@ -15,5 +15,33 @@
   margin: 10px;
 }
 
+.book-container {
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 10px;
+  background-color: rgba(76, 175, 80, 0.3);
+  text-align: center;
+}
+
+.book-info {
+  font-weight: 700;
+}
+
+.book-description {
+  background-color: rgb(255, 255, 255, 0.6);
+  border-radius: 5px;
+  margin: 5px;
+}
+
+.book-btn {
+  margin: 10px;
+  background-color: white;
+}
+
+.filler {
+  height: 75px;
+}
+
 @media screen and (min-width: 768px) {
 }

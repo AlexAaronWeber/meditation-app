@@ -19,9 +19,7 @@ export class MusSearchComponent implements OnInit {
     private favsService: FavoritesService
   ) {}
 
-  ngOnInit(): void {
-    //this.getPlaceHolderMusic();
-  }
+  ngOnInit(): void {}
 
   getMusicVideos = (form: NgForm): any => {
     this.service.getMusic(form.value.music).subscribe((response) => {
@@ -31,9 +29,6 @@ export class MusSearchComponent implements OnInit {
   };
 
   addToFavorites = (music) => {
-    // if (this.isFavorite === false) {
-    //   this.isFavorite = true;
     this.favsService.addToMusicFavorites(music);
   };
-  // };
 }

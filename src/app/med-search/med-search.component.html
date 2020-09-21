@@ -1,7 +1,7 @@
 <app-header></app-header>
 <form #meditationForm="ngForm" (ngSubmit)="getVideos(meditationForm)">
   <label for="meditation">Meditation Search</label>
-  <select id="meditation" name="meditation" ngModel>
+  <select id="meditation" required name="meditation" ngModel>
     <option value="guided stress meditation">Stress</option>
     <option value="guided anxiety meditation">Anxiety</option>
     <option value="guided depression meditation">Depression</option>

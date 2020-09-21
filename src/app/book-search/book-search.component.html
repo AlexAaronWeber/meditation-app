@@ -6,7 +6,7 @@
 
 <form #bookForm="ngForm" (ngSubmit)="getBooks(bookForm)">
   <label for="books">What are you feeling?</label>
-  <select id="books" name="books" ngModel>
+  <select required id="books" name="books" ngModel>
     <option value="stress">Stress</option>
     <option value="anxiety">Anxiety</option>
     <option value="depression">Depression</option>
@@ -17,11 +17,16 @@
   <button class="book-btn">Discover</button>
 </form>
 
-<div *ngFor="let book of meditationBooks; index as i">
-  <p>{{ meditationBooks[i].volumeInfo.title }}</p>
-  <p>{{ meditationBooks[i].volumeInfo.authors }}</p>
+<div *ngFor="let book of meditationBooks; index as i" class="book-container">
+  <p class="book-info">{{ meditationBooks[i].volumeInfo.title }}</p>
+  <p class="book-info">{{ meditationBooks[i].volumeInfo.authors }}</p>
   <img src="{{ meditationBooks[i].volumeInfo.imageLinks.thumbnail }}" alt="" />
-  <p>{{ meditationBooks[i].volumeInfo.description }}</p>
-  <button (click)="addToFavorites(book)">Add to Favorites</button>
+  <div class="book-description">
+    <p>{{ meditationBooks[i].volumeInfo.description }}</p>
+  </div>
+  <button (click)="addToFavorites(book)" class="book-btn">
+    Add to Favorites
+  </button>
 </div>
+<div class="filler"></div>
 <app-footer class="footer"></app-footer>

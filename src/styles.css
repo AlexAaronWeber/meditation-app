@@ -6,6 +6,7 @@ body {
   background-image: url("src/assets/iStock-1175009759-1536x903.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 button {
