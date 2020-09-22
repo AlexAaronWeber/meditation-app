@@ -7,11 +7,19 @@
   align-items: center;
   flex-direction: column;
 }
+.img {
+  height: 250px;
+  width: 150px;
+}
 .div {
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 5px;
+  height: 400px;
+  width: 325px;
   padding: 5px;
+  border: 1px solid black;
   padding-bottom: 10px;
+  margin-bottom: 10px;
 }
 .title {
   text-align: center;
@@ -28,10 +36,11 @@
   font-family: futura-pt, sans-serif;
   margin-top: 10px;
   font-size: 25px;
-  border: none;
   outline: none;
+  border: none;
   font-weight: bolder;
-  background-color: rgba(255, 255, 255, 0.7);
+  background-color: transparent;
 }
+
 @media screen and (min-width: 768px) {
 }

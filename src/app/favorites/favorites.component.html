@@ -5,6 +5,7 @@
     <div class="main-cards">
       <h3>Your favorite meditation techniques</h3>
       <app-fav-med
+        class="center-con"
         *ngFor="let favorite of meditationFavs; index as i"
         [meditationsRef]="favorite"
         (deleted)="deleteMeditationFavorite(i)"
@@ -23,6 +24,7 @@
     <div class="main-cards">
       <h3>Your favorite soothing music</h3>
       <app-fav-mus
+        class="center-con"
         *ngFor="let favorite of musicFavs; index as i"
         [musicRef]="favorite"
         (deleted)="deleteMusicFavorite(i)"
@@ -37,6 +39,7 @@
     <div class="main-cards">
       <h3>Your favorite books on mental health</h3>
       <app-fav-book
+        class="center-con"
         *ngFor="let favorite of bookFavs; index as i"
         [bookRef]="favorite"
         (deleted)="deleteBookFavorite(i)"
@@ -48,4 +51,5 @@
     </div>
   </section>
 </main>
+<div class="filler"></div>
 <app-footer class="footer"></app-footer>

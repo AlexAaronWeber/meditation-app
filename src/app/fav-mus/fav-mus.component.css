@@ -1,6 +1,26 @@
 .filler {
   height: 75px;
 }
+.mus-con {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.mus-container {
+  border: 1px solid black;
+  height: 400px;
+  width: 325px;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255, 0.6);
+  margin: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
 
 @media screen and (min-width: 768px) {
+  .med-con {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }

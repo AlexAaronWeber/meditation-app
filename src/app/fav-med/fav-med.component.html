@@ -1,14 +1,14 @@
-<div>
+<div class="med-container med-con">
   <p>{{ meditationsRef.snippet.title }}</p>
   <youtube-player
     videoId="{{ meditationsRef.id.videoId }}"
     suggestedQuality="highres"
     [height]="250"
-    [width]="500"
+    [width]="300"
     [startSeconds]="'0'"
     [endSeconds]=""
   >
   </youtube-player>
-  <button (click)="deleteMeditation()">Delete</button>
   <div class="filler"></div>
+  <button (click)="deleteMeditation()">Delete</button>
 </div>

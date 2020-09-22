@@ -26,6 +26,13 @@ main {
 .h5 {
   cursor: pointer;
 }
+.filler {
+  height: 75px;
+}
+.center-con {
+  display: flex;
+  justify-content: center;
+}
 
 @media screen and (min-width: 768px) {
   .card-container {

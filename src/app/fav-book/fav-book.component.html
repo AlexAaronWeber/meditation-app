@@ -2,8 +2,14 @@
   <button (click)="deleteBook()" class="btn">X</button>
   <section class="fav">
     <p class="title">{{ bookRef.volumeInfo.title }}</p>
+
+    <img
+      class="img"
+      src="{{ bookRef.volumeInfo.imageLinks.thumbnail }}"
+      alt=""
+    />
+    <p class="author">Author:</p>
     <p class="author">{{ bookRef.volumeInfo.authors }}</p>
-    <img src="{{ bookRef.volumeInfo.imageLinks.thumbnail }}" alt="" />
   </section>
 </div>
 <div class="filler"></div>
