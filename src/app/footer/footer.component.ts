@@ -8,13 +8,19 @@ import { Router } from '@angular/router';
 })
 export class FooterComponent implements OnInit {
   constructor() {}
-  toggle = true;
-  status = 'Enable';
+  homeClicked: Boolean = true;
+  bookClicked: Boolean = false;
+  musicClicked: Boolean = false;
+  medClicked: Boolean = false;
+  favClicked: Boolean = false;
 
   ngOnInit(): void {}
 
-  enableDisableRule(job) {
-    this.toggle = !this.toggle;
-    this.status = this.toggle ? 'Enable' : 'Disable';
-  }
+  homeClick = () => {
+    this.homeClicked = true;
+    this.bookClicked = false;
+    this.musicClicked = false;
+    this.medClicked = false;
+    this.favClicked = false;
+  };
 }
