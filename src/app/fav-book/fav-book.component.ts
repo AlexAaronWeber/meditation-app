@@ -18,12 +18,4 @@ export class FavBookComponent implements OnInit {
   deleteBook() {
     this.deleted.emit();
   }
-
-  // deleteBookFavorite = (fav: any) => {
-  //   this.service.deleteBookFavorite(fav);
-  // };
-
-  // deleteBookFavorite = (index: number) => {
-  //   this.bookFavs.splice(index, 1);
-  //};
 }

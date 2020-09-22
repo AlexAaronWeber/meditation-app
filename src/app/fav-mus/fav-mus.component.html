@@ -1,14 +1,17 @@
-<div class="mus-container mus-con" s>
-  <p>{{ musicRef.snippet.title }}</p>
-  <youtube-player
-    videoId="{{ musicRef.id.videoId }}"
-    suggestedQuality="highres"
-    [height]="250"
-    [width]="300"
-    [startSeconds]="'0'"
-    [endSeconds]=""
-  >
-  </youtube-player>
-  <div class="filler"></div>
-  <button (click)="deleteMusic()">Delete</button>
+<div class="div">
+  <i (click)="deleteMusic()" class="fas fa-times btn"></i>
+  <div class="mus-container mus-con" s>
+    <p>{{ musicRef.snippet.title }}</p>
+    <youtube-player
+      videoId="{{ musicRef.id.videoId }}"
+      suggestedQuality="highres"
+      [height]="250"
+      [width]="300"
+      [startSeconds]="'0'"
+      [endSeconds]=""
+    >
+    </youtube-player>
+    <div class="filler"></div>
+    <!-- <button (click)="deleteMusic()">Delete</button> -->
+  </div>
 </div>

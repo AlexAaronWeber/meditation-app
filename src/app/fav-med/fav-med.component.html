@@ -1,14 +1,17 @@
-<div class="med-container med-con">
-  <p>{{ meditationsRef.snippet.title }}</p>
-  <youtube-player
-    videoId="{{ meditationsRef.id.videoId }}"
-    suggestedQuality="highres"
-    [height]="250"
-    [width]="300"
-    [startSeconds]="'0'"
-    [endSeconds]=""
-  >
-  </youtube-player>
-  <div class="filler"></div>
-  <button (click)="deleteMeditation()">Delete</button>
+<div class="div">
+  <i (click)="deleteMeditation()" class="fas fa-times btn"></i>
+  <div class="med-container med-con">
+    <p>{{ meditationsRef.snippet.title }}</p>
+    <youtube-player
+      videoId="{{ meditationsRef.id.videoId }}"
+      suggestedQuality="highres"
+      [height]="250"
+      [width]="300"
+      [startSeconds]="'0'"
+      [endSeconds]=""
+    >
+    </youtube-player>
+    <div class="filler"></div>
+    <!-- <button (click)="deleteMeditation()">Delete</button> -->
+  </div>
 </div>

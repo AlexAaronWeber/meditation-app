@@ -1,28 +1,34 @@
 <app-header></app-header>
 <main class="home">
+  <!-- bookbar -->
   <div class="scroll-bar hidden">
     <app-book-bar></app-book-bar>
   </div>
-
-  <section class="card-container">
+  <!-- quote and nav cards -->
+  <section class="section">
     <h2 class="middle-header">
-      "Knowing others is wisdom; Knowing the self is enlightenment" -Lao Tzu
+      <p class="quote">Knowing others is intelligence;</p>
+      <p class="quote">Knowing yourself is true wisdom</p>
+      <p class="quote">-Lao Tzu</p>
     </h2>
-    <div class="main-cards" routerLink="/meditations">
-      <h3>Find Meditation Techniques</h3>
-      <p>Click here to search for great meditation techniques</p>
-    </div>
+    <div class="card-container">
+      <div class="main-cards" routerLink="/meditations">
+        <h3>Find Meditation Techniques</h3>
+        <p>Click here to search for great meditation techniques</p>
+      </div>
 
-    <div class="main-cards" routerLink="/music">
-      <h3>Listen to Soothing music</h3>
-      <p>Click here to get relaxing music recommendations</p>
-    </div>
+      <div class="main-cards" routerLink="/music">
+        <h3>Listen to Soothing music</h3>
+        <p>Click here to get relaxing music recommendations</p>
+      </div>
 
-    <div class="main-cards" routerLink="/book">
-      <h3>Top Books on Mental Health</h3>
-      <p>Click here to search for informative books</p>
+      <div class="main-cards" routerLink="/book">
+        <h3>Top Books on Mental Health</h3>
+        <p>Click here to search for informative books</p>
+      </div>
     </div>
   </section>
+  <!-- mod and bored -->
   <div class="mod-bored">
     <app-mod class="mod hidden"></app-mod>
     <app-bored></app-bored>

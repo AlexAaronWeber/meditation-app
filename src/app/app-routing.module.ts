@@ -6,6 +6,7 @@ import { MedSearchComponent } from './med-search/med-search.component';
 import { MusSearchComponent } from './mus-search/mus-search.component';
 import { BookSearchComponent } from './book-search/book-search.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AboutComponent } from './about/about.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'meditations', component: MedSearchComponent },
   { path: 'music', component: MusSearchComponent },
   { path: 'book', component: BookSearchComponent },
+  { path: 'about', component: AboutComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: NotFoundComponent },
 ];

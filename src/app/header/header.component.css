@@ -1,12 +1,14 @@
 .header {
+  background-color: rgba(76, 175, 80, 0.3);
+  width: 100%;
   margin: 0;
   padding: 0;
-  width: 100%;
   border-bottom: 5px solid black;
   margin-bottom: 20px;
+}
+.home-nav {
   display: flex;
   justify-content: center;
-  background-color: rgba(76, 175, 80, 0.3);
   color: #07367d;
   width: 100%;
 }
@@ -37,6 +39,10 @@
   align-items: center;
 }
 @media screen and (min-width: 768px) {
+  .home-nav {
+    justify-content: start;
+  }
+
   .Title {
     margin-left: 10px;
   }
@@ -92,6 +98,7 @@
 
   .dropbtn {
     font-size: 20px;
+    margin-left: 20px;
     color: #07367d;
     cursor: pointer;
     border: none;
@@ -158,5 +165,6 @@
   .buttons {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
 }

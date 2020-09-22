@@ -10,7 +10,10 @@
           src="{{ meditationBooks[i].volumeInfo.imageLinks.thumbnail }}"
           alt=""
         />
-        <button (click)="addToFavorites(book)">Add to Favorites</button>
+        <!-- <button (click)="addToFavorites(book)">Add to Favorites</button> -->
+        <i (click)="addToFavorites(book)" class="fas fa-plus add">
+          <span class="fav"> Add Favorite</span></i
+        >
       </div>
     </div>
   </div>

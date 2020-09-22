@@ -1,21 +1,34 @@
 .filler {
   height: 75px;
 }
-.med-con {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.med-container {
+
+.div {
   border: 1px solid black;
   height: 400px;
   width: 325px;
   border-radius: 5px;
   background-color: rgb(255, 255, 255, 0.6);
   margin: 10px;
+}
+.med-con {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.med-container {
   text-align: center;
   display: flex;
   justify-content: center;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.btn:hover {
+  background-color: lightcoral;
+  border-radius: 25%;
 }
 
 @media screen and (min-width: 768px) {
