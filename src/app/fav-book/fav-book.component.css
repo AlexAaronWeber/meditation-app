@@ -2,5 +2,36 @@
   height: 75px;
 }
 
+.fav {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.div {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 5px;
+  padding: 5px;
+  padding-bottom: 10px;
+}
+.title {
+  text-align: center;
+  margin: 3px;
+}
+
+.author {
+  text-align: center;
+  margin: 3px;
+}
+
+.btn {
+  cursor: pointer;
+  font-family: futura-pt, sans-serif;
+  margin-top: 10px;
+  font-size: 25px;
+  border: none;
+  outline: none;
+  font-weight: bolder;
+  background-color: rgba(255, 255, 255, 0.7);
+}
 @media screen and (min-width: 768px) {
 }

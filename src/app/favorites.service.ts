@@ -11,16 +11,22 @@ export class FavoritesService {
   constructor() {}
 
   addToMusicFavorites = (music: any) => {
-    this.favoriteMusic.push(music);
-    console.log(this.favoriteMusic);
+    if (this.favoriteMusic.indexOf(music) == -1) {
+      this.favoriteMusic.push(music);
+      console.log(this.favoriteMusic);
+    }
   };
   addToMeditationsFavorites = (meditation: any) => {
-    this.favoriteMeditation.push(meditation);
-    console.log(this.favoriteMeditation);
+    if (this.favoriteMeditation.indexOf(meditation) == -1) {
+      this.favoriteMeditation.push(meditation);
+      console.log(this.favoriteMeditation);
+    }
   };
   addToBooksFavorites = (book: any) => {
-    this.favoriteBooks.push(book);
-    console.log(this.favoriteBooks);
+    if (this.favoriteBooks.indexOf(book) == -1) {
+      this.favoriteBooks.push(book);
+      console.log(this.favoriteBooks);
+    }
   };
 
   getFavorites = (): any => {

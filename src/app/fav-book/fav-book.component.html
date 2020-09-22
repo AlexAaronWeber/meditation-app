@@ -1,7 +1,9 @@
-<div>
-  <p>{{ bookRef.volumeInfo.title }}</p>
-  <p>{{ bookRef.volumeInfo.authors }}</p>
-  <img src="{{ bookRef.volumeInfo.imageLinks.thumbnail }}" alt="" />
-  <button (click)="deleteBook()">Delete</button>
-  <div class="filler"></div>
+<div class="div">
+  <button (click)="deleteBook()" class="btn">X</button>
+  <section class="fav">
+    <p class="title">{{ bookRef.volumeInfo.title }}</p>
+    <p class="author">{{ bookRef.volumeInfo.authors }}</p>
+    <img src="{{ bookRef.volumeInfo.imageLinks.thumbnail }}" alt="" />
+  </section>
 </div>
+<div class="filler"></div>

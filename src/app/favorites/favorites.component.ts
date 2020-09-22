@@ -32,14 +32,6 @@ export class FavoritesComponent implements OnInit {
     console.log('this is the books favs', this.bookFavs);
   };
 
-  //Delete functions
-  // deleteMusicFavorite = (index: number) => {
-  //   this.musicFavs.splice(index, 1);
-  // };
-
-  // deleteMusicFavorite = (fav: any) => {
-  //   this.musicFavs.deleteFavorite(fav);
-  // };
   deleteBookFavorite = (index: number) => {
     this.bookFavs.splice(index, 1);
   };

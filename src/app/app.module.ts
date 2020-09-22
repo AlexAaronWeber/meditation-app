@@ -19,6 +19,7 @@ import { FavMedComponent } from './fav-med/fav-med.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { YouTubePlayerModule } from '@angular/youtube-player';
 import { FooterComponent } from './footer/footer.component';
+import { AboutComponent } from './about/about.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +37,7 @@ import { FooterComponent } from './footer/footer.component';
     FavMedComponent,
     NotFoundComponent,
     FooterComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
