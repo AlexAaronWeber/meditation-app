@@ -10,6 +10,7 @@ export class FooterComponent implements OnInit {
   constructor() {}
   toggle = true;
   status = 'Enable';
+
   ngOnInit(): void {}
 
   enableDisableRule(job) {
