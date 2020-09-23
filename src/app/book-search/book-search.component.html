@@ -4,7 +4,12 @@
   you through your struggles
 </p>
 
-<form ngNativeValidate #bookForm="ngForm" (ngSubmit)="getBooks(bookForm)">
+<form
+  class="centered"
+  ngNativeValidate
+  #bookForm="ngForm"
+  (ngSubmit)="getBooks(bookForm)"
+>
   <label class="book-label" for="books">What do you need help with?</label>
   <select id="books" name="books" ngModel required>
     <option value="stress">Stress</option>

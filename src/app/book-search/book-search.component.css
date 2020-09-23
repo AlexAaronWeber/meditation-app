@@ -38,10 +38,10 @@
 }
 
 .book-label {
-  margin: 10px;
-  padding: 10px;
   background-color: rgb(255, 255, 255, 0.6);
   border-radius: 5px;
+  margin: 5px;
+  padding: 7px;
   font-family: futura-pt, sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -70,5 +70,8 @@
   height: 75px;
 }
 
+.centered {
+  text-align: center;
+}
 @media screen and (min-width: 768px) {
 }
