@@ -1,15 +1,18 @@
 <app-header></app-header>
+<p class="mus-description">
+  Discover relaxing music and give your mind a break from the noise of life
+</p>
 <form
   ngNativeValidate
   #musicForm="ngForm"
   (ngSubmit)="getMusicVideos(musicForm)"
 >
-  <label for="music" class="mus-search">Music Search</label>
+  <label for="music" class="mus-search">How are you feeling?</label>
   <select id="music" name="music" ngModel required>
     <option value="" disabled selected></option>
-    <option value="live meditation music">Live Broadcast</option>
-    <option value="acoustic newage music">Stress</option>
-    <option value="anxiety reduction instrumental">Anxiety</option>
+    <option value="live meditation music">Relaxed</option>
+    <option value="acoustic newage music">Stressed</option>
+    <option value="anxiety reduction instrumental">Anxious</option>
     <option value="uplifting newage music">Depression</option>
     <option value="relaxing newage music">Fear</option>
   </select>
@@ -27,9 +30,9 @@
       [endSeconds]=""
     >
     </youtube-player>
-    <button class="mus-btn" (click)="addToFavorites(music)">
-      Add to Favorites
-    </button>
+    <i class="mus-btn" (click)="addToFavorites(music)" class="fas fa-plus add">
+      <span class="fav">Add Favorite</span>
+    </i>
   </div>
 </section>
 
