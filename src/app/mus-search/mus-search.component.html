@@ -1,4 +1,10 @@
 <app-header></app-header>
+
+<p class="music-description">
+  Discover and listen to music that is tailored to help relieve, relax, and
+  realign your mind and body
+</p>
+
 <form
   ngNativeValidate
   #musicForm="ngForm"
@@ -6,7 +12,6 @@
 >
   <label for="music" class="mus-search">Music Search</label>
   <select id="music" name="music" ngModel required>
-    <option value="" disabled selected></option>
     <option value="live meditation music">Live Broadcast</option>
     <option value="acoustic newage music">Stress</option>
     <option value="anxiety reduction instrumental">Anxiety</option>
@@ -15,6 +20,7 @@
   </select>
   <button class="music-btn">Submit</button>
 </form>
+
 <section class="big-container">
   <div class="mus-container" *ngFor="let music of musicVideos">
     <p class="mus-title">{{ music.snippet.title }}</p>
