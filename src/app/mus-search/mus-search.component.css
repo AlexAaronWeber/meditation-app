@@ -56,7 +56,33 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-
+.fav {
+  font-weight: 500;
+  font-family: futura-pt, sans-serif;
+  font-style: normal;
+}
+.add {
+  cursor: pointer;
+}
+.add:hover {
+  color: lightcoral;
+}
+.mus-description {
+  font-family: futura-pt, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  font-style: normal;
+  /* background-color: rgb(255, 255, 255, 0.6); */
+  border-radius: 5px;
+  margin: 25px;
+  padding: 7px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+.centered {
+  text-align: center;
+}
 @media screen and (min-width: 768px) {
   .big-container {
     display: flex;

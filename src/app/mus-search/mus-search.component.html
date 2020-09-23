@@ -1,20 +1,14 @@
 <app-header></app-header>
 
-<p class="music-description">
-  Discover and listen to music that is tailored to help relieve, relax, and
-  realign your mind and body
-</p>
-
 <form
+  class="centered"
   ngNativeValidate
   #musicForm="ngForm"
   (ngSubmit)="getMusicVideos(musicForm)"
 >
-  <label for="music" class="mus-search">Music Search</label>
+  <label for="music" class="mus-search">How are you feeling?</label>
   <select id="music" name="music" ngModel required>
-    <option value="live meditation music">Live Broadcast</option>
-    <option value="acoustic newage music">Stress</option>
-    <option value="anxiety reduction instrumental">Anxiety</option>
+
     <option value="uplifting newage music">Depression</option>
     <option value="relaxing newage music">Fear</option>
   </select>
@@ -33,9 +27,9 @@
       [endSeconds]=""
     >
     </youtube-player>
-    <button class="mus-btn" (click)="addToFavorites(music)">
-      Add to Favorites
-    </button>
+    <i class="mus-btn" (click)="addToFavorites(music)" class="fas fa-plus add">
+      <span class="fav">Add Favorite</span>
+    </i>
   </div>
 </section>
 

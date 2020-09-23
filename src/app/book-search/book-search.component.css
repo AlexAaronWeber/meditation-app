@@ -12,11 +12,11 @@
 }
 
 .books-description {
-  text-align: center;
   font-family: futura-pt, sans-serif;
   font-weight: 500;
+  font-size: 20px;
   font-style: normal;
-  color: black;
+
 }
 
 .img {
@@ -38,10 +38,10 @@
 }
 
 .book-label {
-  margin: 10px;
-  padding: 10px;
   background-color: rgb(255, 255, 255, 0.6);
   border-radius: 5px;
+  margin: 5px;
+  padding: 7px;
   font-family: futura-pt, sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -86,11 +86,6 @@
   height: 75px;
 }
 
-.big-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
 
 @media screen and (min-width: 768px) {
   .big-container {

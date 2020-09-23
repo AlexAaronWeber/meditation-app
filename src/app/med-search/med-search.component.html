@@ -1,17 +1,21 @@
 <app-header></app-header>
+<p class="med-description">
+  Discover guided meditations made specifically for how you're feeling
+</p>
 <form
+  class="centered"
   ngNativeValidate
   #meditationForm="ngForm"
   (ngSubmit)="getVideos(meditationForm)"
 >
-  <label for="meditation" class="med-search">Meditation Search</label>
+  <label for="meditation" class="med-search">How are you feeling?</label>
   <select id="meditation" required name="meditation" ngModel>
-    <option value="guided stress meditation">Stress</option>
-    <option value="guided anxiety meditation">Anxiety</option>
+    <option value="guided stress meditation">Stressed</option>
+    <option value="guided anxiety meditation">Anxious</option>
     <option value="guided depression meditation">Depression</option>
     <option value="guided fear meditation">Fear</option>
-    <option value="guided sleep meditation">Sleep</option>
-    <option value="guided anger meditation">Anger</option>
+    <option value="guided sleep meditation">I Can't Sleep!</option>
+    <option value="guided anger meditation">Angry</option>
   </select>
 
   <button class="med-btn">Submit</button>
@@ -29,9 +33,13 @@
       [endSeconds]=""
     >
     </youtube-player>
-    <button class="med-btn" (click)="addToFavorites(meditation)">
-      Add to Favorites
-    </button>
+    <i
+      class="med-btn"
+      (click)="addToFavorites(meditation)"
+      class="fas fa-plus add"
+    >
+      <span class="fav">Add Favorite</span>
+    </i>
   </div>
 </section>
 <div class="filler"></div>
