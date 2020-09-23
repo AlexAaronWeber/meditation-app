@@ -14,6 +14,8 @@ export class BookSearchComponent implements OnInit {
   meditationBooks: any;
   book: any;
   isFavorite: boolean = false;
+  bookDescription: any = null;
+
   constructor(
     private service: BooksService,
     private router: Router,
@@ -30,11 +32,9 @@ export class BookSearchComponent implements OnInit {
   };
 
   addToFavorites = (book) => {
-    // if (this.isFavorite === false) {
-    //   this.isFavorite = true;
     this.favsService.addToBooksFavorites(book);
-    // }
   };
+
   searchBooks = (form: NgForm): any => {
     console.log(form.value.books);
     this.router.navigate(['book'], {
@@ -42,5 +42,13 @@ export class BookSearchComponent implements OnInit {
         q: form.value.books,
       },
     });
+  };
+
+  showForm = (index) => {
+    this.bookDescription = index;
+  };
+
+  hideForm = () => {
+    this.bookDescription = null;
   };
 }

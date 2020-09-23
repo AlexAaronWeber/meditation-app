@@ -4,7 +4,12 @@
   you through your struggles
 </p>
 
-<form ngNativeValidate #bookForm="ngForm" (ngSubmit)="getBooks(bookForm)">
+<form
+  class="centered"
+  ngNativeValidate
+  #bookForm="ngForm"
+  (ngSubmit)="getBooks(bookForm)"
+>
   <label class="book-label" for="books">What do you need help with?</label>
   <select id="books" name="books" ngModel required>
     <option value="stress">Stress</option>
@@ -17,16 +22,38 @@
   <button class="book-btn">Discover</button>
 </form>
 
-<div *ngFor="let book of meditationBooks; index as i" class="book-container">
-  <p class="book-info">{{ meditationBooks[i].volumeInfo.title }}</p>
-  <p class="book-info">{{ meditationBooks[i].volumeInfo.authors }}</p>
-  <img src="{{ meditationBooks[i].volumeInfo.imageLinks.thumbnail }}" alt="" />
-  <div class="book-description">
-    <p>{{ meditationBooks[i].volumeInfo.description }}</p>
+<section class="big-container">
+  <div *ngFor="let book of meditationBooks; index as i" class="book-container">
+    <p class="book-info">{{ meditationBooks[i].volumeInfo.title }}</p>
+
+    <img
+      class="img"
+      src="{{ meditationBooks[i].volumeInfo.imageLinks.thumbnail }}"
+      alt=""
+    />
+    <p class="author">Author:</p>
+    <p class="book-info">{{ meditationBooks[i].volumeInfo.authors }}</p>
+    <button
+      *ngIf="bookDescription === null"
+      (click)="showForm(i)"
+      class="book-btn"
+    >
+      Book Description
+    </button>
+    <button (click)="addToFavorites(book)" class="book-btn">
+      Add to Favorites
+    </button>
+
+    <div *ngIf="bookDescription == i" class="description-container">
+      <div class="book-description">
+        <button (click)="hideForm()" class="exit">X</button>
+        <p>
+          {{ meditationBooks[i].volumeInfo.description }}
+        </p>
+      </div>
+    </div>
   </div>
-  <button (click)="addToFavorites(book)" class="book-btn">
-    Add to Favorites
-  </button>
-</div>
+</section>
+
 <div class="filler"></div>
 <app-footer class="footer"></app-footer>
