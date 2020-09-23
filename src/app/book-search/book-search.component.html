@@ -33,16 +33,16 @@
     />
     <p class="author">Author:</p>
     <p class="book-info">{{ meditationBooks[i].volumeInfo.authors }}</p>
-    <button
+    <i
       *ngIf="bookDescription === null"
       (click)="showForm(i)"
-      class="book-btn"
+      class="fas fa- add"
     >
-      Book Description
-    </button>
-    <button (click)="addToFavorites(book)" class="book-btn">
-      Add to Favorites
-    </button>
+      <span class="fav"> Book Description </span>
+    </i>
+    <i (click)="addToFavorites(book)" class="fas fa-plus add">
+      <span class="fav"> Add to Favorites </span>
+    </i>
 
     <div *ngIf="bookDescription == i" class="description-container">
       <div class="book-description">

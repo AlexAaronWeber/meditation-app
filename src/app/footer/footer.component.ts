@@ -7,20 +7,20 @@ import { Router } from '@angular/router';
   styleUrls: ['./footer.component.css'],
 })
 export class FooterComponent implements OnInit {
+  // homeClicked: Boolean = true;
+  // bookClicked: Boolean = false;
+  // musicClicked: Boolean = false;
+  // medClicked: Boolean = false;
+  // favClicked: Boolean = false;
   constructor() {}
-  homeClicked: Boolean = true;
-  bookClicked: Boolean = false;
-  musicClicked: Boolean = false;
-  medClicked: Boolean = false;
-  favClicked: Boolean = false;
 
   ngOnInit(): void {}
 
-  homeClick = () => {
-    this.homeClicked = true;
-    this.bookClicked = false;
-    this.musicClicked = false;
-    this.medClicked = false;
-    this.favClicked = false;
-  };
+  // homeClick = () => {
+  //   this.homeClicked = true;
+  //   this.bookClicked = false;
+  //   this.musicClicked = false;
+  //   this.medClicked = false;
+  //   this.favClicked = false;
+  // };
 }
