@@ -83,4 +83,7 @@ main {
   .section {
     flex: 1;
   }
+  .headphones {
+    filter: opacity(100%);
+  }
 }
