@@ -40,7 +40,7 @@
   text-align: center;
   margin: 5px;
   font-family: "Righteous", cursive;
-  font-size: 25px;
+  font-size: 18px;
 }
 
 .intro {
@@ -93,5 +93,9 @@
   .developer {
     flex-direction: column;
     flex: 1;
+  }
+
+  .name {
+    font-size: 25px;
   }
 }
