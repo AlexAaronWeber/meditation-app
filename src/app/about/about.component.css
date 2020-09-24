@@ -23,8 +23,8 @@
 .headshot {
   border-radius: 50%;
   border: 3px solid black;
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 150px;
   text-align: center;
 }
 
@@ -37,6 +37,7 @@
 }
 
 .name {
+  text-align: center;
   margin: 5px;
   font-family: "Righteous", cursive;
   font-size: 25px;
@@ -83,6 +84,8 @@
   }
 
   .headshot {
+    height: 200px;
+    width: 200px;
     margin-left: 10px;
     margin-right: 10px;
   }
