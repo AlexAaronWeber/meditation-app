@@ -9,6 +9,7 @@
 }
 
 .about {
+  font-size: 27px;
   border-bottom: 2px solid black;
   font-family: "Righteous", cursive;
 }
@@ -17,7 +18,7 @@
   border: 3px solid black;
   border-radius: 10px;
   word-wrap: normal;
-  margin: 40px;
+  margin: 20px;
   margin-top: 20px;
 }
 .headshot {
@@ -25,12 +26,11 @@
   border: 3px solid black;
   height: 150px;
   width: 150px;
-  text-align: center;
 }
 
 .developer {
   margin: 10px;
-  padding: 5px;
+
   display: flex;
   align-items: center;
   flex-direction: row;
@@ -42,6 +42,10 @@
   font-family: "Righteous", cursive;
   font-size: 18px;
 }
+
+/* .brandon{
+  font-size: 15px;
+} */
 
 .intro {
   margin: 10px;
@@ -78,6 +82,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  .about {
+    font-size: 40px;
+  }
+
   .container {
     display: flex;
     justify-content: space-between;
