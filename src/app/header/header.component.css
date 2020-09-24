@@ -1,8 +1,8 @@
 .header {
   background-color: rgba(76, 175, 80, 0.3);
   width: 100%;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   border-bottom: 5px solid black;
   margin-bottom: 20px;
 }
@@ -15,6 +15,7 @@
 
 .Title {
   cursor: pointer;
+  margin-bottom: 5px;
   justify-content: center;
   display: flex;
   font-size: 45px;
@@ -33,10 +34,10 @@
 }
 .icon {
   display: flex;
-  height: 60px;
-  width: 60px;
-  padding-top: 30px;
+  margin-top: 10px;
+  font-size: 60px;
   align-items: center;
+  color: rgb(7, 82, 7);
 }
 
 .about {
@@ -51,13 +52,16 @@
   .home-nav {
     justify-content: start;
   }
-
+  .icon {
+    margin-bottom: 15px;
+  }
   .about {
     display: none;
   }
 
   .Title {
     margin-left: 10px;
+    margin-bottom: 20px;
   }
   .header {
     margin: 0;

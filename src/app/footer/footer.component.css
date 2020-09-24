@@ -14,6 +14,10 @@
   padding: 10px;
 }
 
+.fa-book-open {
+  margin-top: 2px;
+}
+
 .clicked-icon {
   background-color: lightgray;
   border-radius: 50%;
