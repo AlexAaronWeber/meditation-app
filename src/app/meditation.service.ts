@@ -496,7 +496,7 @@ export class MeditationService {
         key: this.brandonKey,
         q: subject,
         part: 'snippet',
-        maxResults: '15',
+        maxResults: '24',
       },
     });
   };

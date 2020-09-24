@@ -17,9 +17,10 @@ export class MusicService {
   getMusic = (subject: string): any => {
     return this.http.get(this.baseUrlMusic, {
       params: {
+        key: this.auxKey,
         q: subject,
         part: 'snippet',
-        maxResults: '15',
+        maxResults: '24',
       },
     });
   };
