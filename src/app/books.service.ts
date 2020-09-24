@@ -16,6 +16,7 @@ export class BooksService {
       params: {
         key: this.key,
         q: subject,
+        maxResults: '16',
       },
     });
   };
